@@ -51,7 +51,7 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 * 符号长度限制增加到了64，你不再需要缩写你的函数名，同时一些原生的sa-mp函数名的缩写也变为了阅读性更好的全称，如GetRandomCarColPair变为GetRandomVehicleColourPair，以及更加规范的命名
 * 许多功能加入和大量原生功能升级，更多函数添加{Float, _}:...format的支持
 * 关于标签矫正以及const矫正的规范性
-* 新的Pawn 编辑器[qawno编辑器](https://github.com/Zeex/qawno)
+* 新的Pawn 编辑器[qawno编辑器](https://github.com/Zeex/qawno)包含在其中
 
 ### 兼容性
 虽然这个项目的目标是与现有的SA:MP服务器的功能接近，使移植变得容易（在我们可以开始做更有趣的事情之前，我们有很多很多的想法），但100%的兼容性是不可能的。原因很简单--SA:MP服务器有错误*。复制这些错误是愚蠢的--
