@@ -1,0 +1,1 @@
+# sa-mp-to-open.mp
