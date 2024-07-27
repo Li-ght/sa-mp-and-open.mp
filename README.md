@@ -1,4 +1,6 @@
 ## 索引
+点击[此处](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)直接跳转[sa-mp服务器转open.mp服务器 教程与帮助](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)主题
+
 [open.mp官网](https://www.open.mp/)
 
 [open.mp服务端](https://github.com/openmultiplayer/open.mp/releases)
@@ -14,8 +16,6 @@
 [samp维基百科](https://sampwiki.blast.hk/wiki/Main_Page)
 
 [samp旧论坛备份](https://sampforum.blast.hk/)
-
-[sa-mp服务器转open.mp服务器 教程与帮助](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)
 
 推荐大家加入我们QQ群和QQ频道以获得最新资讯和支持，打造互相探讨学习交流的净地
 
