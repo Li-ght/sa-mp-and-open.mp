@@ -104,7 +104,7 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 * 内置了超过150个[YSF](https://github.com/IS4Code/YSF/wiki/Natives)的native功能，可前往[open.mp文档](https://www.open.mp/docs/server/omp-functions)了解详情
 * 许多功能加入和大量原生功能升级，更多函数添加{Float, _}:...format的支持
 * 关于标签矫正以及[const矫正](https://github.com/pawn-lang/compiler/wiki/Const-Correctness)的规范性
-* 包含最新版本编译器3.10.12，修复了原版3.2.3664的所有已知错误和BUG，同时能检测到更多你代码里的问题或者需要改善的地方
+* 包含最新版本编译器3.10.12，新增功能包含见[此处](https://github.com/pawn-lang/compiler/wiki/What's-new)，修复了原版3.2.3664的所有[已知错误和BUG](https://github.com/pawn-lang/compiler/wiki/Known-compiler-bugs)，同时能检测到更多你代码里的问题或者需要改善的地方，为 SA：MP 社区提供更好的开发体验
 * 新的Pawn编辑器[qawno编辑器](https://github.com/Zeex/qawno)包含在其中
 * 符号长度限制增加到了64，你不再需要缩写你的函数名，同时一些原生的sa-mp函数名的缩写也变为了阅读性更好的全称，如GetRandomCarColPair变为GetRandomVehicleColourPair，以及更加规范的命名
 
@@ -178,20 +178,21 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 
 
 ### 下载最新版本open.mp服务端
-* [open.mp服务端](https://github.com/openmultiplayer/open.mp/releases)
-* 插件更新：如果你的服务器有使用到以下这些插件/库，请更新至open.mp版本或者是最新版，下面列表也许不全，有疑问请及时在群里发问
-** [sscanf](https://github.com/Y-Less/sscanf/releases)将字符串转换为多个值、整数、浮点数、玩家等
-** [Pawn.CMD](https://github.com/katursis/Pawn.CMD/releases)比任何其他指令处理器都快
-** [Pawn.RakNet](https://github.com/katursis/Pawn.RakNet/releases)允许您分析 RakNet 流量
-** [YSI](https://github.com/pawn-lang/YSI-Includes)正如之前所说，不论你正在使用open.mp还是SA:MP，都请更新到最新版
-** [Pawn.Regex](https://github.com/katursis/Pawn.Regex/releases)
-* 如果你服务器正在使用以下这些插件/库，现在你可以删除他们了，因为open.mp具备这些功能
-** [YSF](https://github.com/IS4Code/YSF/releases)它的许多功能现在已经在 open.mp 中实现，详情见[此处](https://github.com/openmultiplayer/open.mp/issues/189)
-** [sa-mp-fixes](https://github.com/pawn-lang/sa-mp-fixes)
-** [samp-precise-timers](https://github.com/bmisiak/samp-precise-timers/releases)改善SA:MP的计时器，使其精准，在SA:MP中计时器每秒会有100毫秒左右甚至更多的偏差，比如你设置10秒后发送一条消息，SA:MP可能会在11、12、13秒后才发送
-* 其它常用库/插件的更新，现在常用且流行的库/插件很多都已更新，认同并遵循open.mp团队或SA:MP社区对于代码规范所树立的规则，所以请不要再埋怨，跟上脚步
-** 以防有人找不到下载地址，大家可以直接在Github上搜索，或者前往[open.mp Awesome](https://www.open.mp/docs/awesome)，open.mp官网给大家提供了一系列值得推荐的库/插件/工具等等的列表，本人不建议大家继续使用一些过时且偏门的插件和库，请自行做取舍
+- [open.mp服务端](https://github.com/openmultiplayer/open.mp/releases)
+- 插件更新：如果你的服务器有使用到以下这些插件/库，请更新至open.mp版本或者是最新版，下面列表也许不全，有疑问请及时在群里发问
+  - [sscanf](https://github.com/Y-Less/sscanf/releases) 将字符串转换为多个值、整数、浮点数、玩家等
+  - [Pawn.CMD](https://github.com/katursis/Pawn.CMD/releases) 比任何其他指令处理器都快
+  - [Pawn.RakNet](https://github.com/katursis/Pawn.RakNet/releases) 允许您分析 RakNet 流量
+  - [YSI](https://github.com/pawn-lang/YSI-Includes) 正如之前所说，不论你正在使用open.mp还是SA:MP，都请更新到最新版
+  - [Pawn.Regex](https://github.com/katursis/Pawn.Regex/releases) 在 Pawn 中添加对正则表达式的支持
+- 如果你服务器正在使用以下这些插件/库，现在你可以删除他们了，因为open.mp具备这些功能
+  - [YSF](https://github.com/IS4Code/YSF/releases) 它的许多功能现在已经在 open.mp 中实现，详情见[此处](https://github.com/openmultiplayer/open.mp/issues/189)
+  - [sa-mp-fixes](https://github.com/pawn-lang/sa-mp-fixes) 对SA:MP服务器的大量错误进行了优化修复，即插即用
+  - [samp-precise-timers](https://github.com/bmisiak/samp-precise-timers/releases) 改善SA:MP的计时器，使其精准，在SA:MP中计时器每秒会有100毫秒左右甚至更多的偏差，比如你设置10秒后发送一条消息，SA:MP可能会在11、12、13秒后才发送
+- 其它常用库/插件的更新，现在常用且流行的库/插件很多都已更新，认同并遵循社区对于开发所树立的代码规范，请不要再埋怨，跟上脚步
+  - 这些库主要更新的内容除了更新、修复、优化它们本身的内容以外，还做了[标签矫正](https://github.com/pawn-lang/samp-stdlib/tree/consistency-overhaul?tab=readme-ov-file#more-tags)，[const矫正](https://github.com/pawn-lang/compiler/wiki/Const-Correctness)，函数变化等等，比如大家很熟悉的[streamer插件](https://github.com/samp-incognito/samp-streamer-plugin)
+  - 以防有人找不到下载地址，大家可以直接在Github上搜索，或者前往[open.mp Awesome](https://www.open.mp/docs/awesome)，open.mp官网给大家提供了一系列值得推荐的库/插件/工具等等的列表，本人不建议大家继续使用一些过时且偏门的插件和库，请自行做取舍
   
 
 
-https://github.com/pawn-lang/compiler/wiki/Const-Correctness
+
