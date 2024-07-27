@@ -1,6 +1,4 @@
-## 常见问题
-
-### 索引
+## 索引
 [open.mp官网](https://www.open.mp/)
 
 [open.mp服务端](https://github.com/openmultiplayer/open.mp/releases)
