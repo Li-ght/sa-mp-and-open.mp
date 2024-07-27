@@ -470,7 +470,8 @@ GetVehicleDriver(vehicleid) {
 }
 ```
 ```pawn
-// 比如 SC-RP 里有一个 IsPlayerSpawned 的函数，但是此函数里有一个 PlayerData[playerid][pKilled] 是否被杀的判定，这个时候你应该修改此函数名而不是删除它，比如修改成 IsPlayerSpawnedEx
+// 比如 SC-RP 里有一个 IsPlayerSpawned 的函数，但是此函数里有一个 PlayerData[playerid][pKilled] 是否被杀的判定
+// 这个时候你应该修改此函数名而不是删除它，比如修改成 IsPlayerSpawnedEx
 stock IsPlayerSpawned(playerid)
 {
 	if (playerid < 0 || playerid >= MAX_PLAYERS)
@@ -478,6 +479,9 @@ stock IsPlayerSpawned(playerid)
 
 	return (!PlayerData[playerid][pKilled]) && (GetPlayerState(playerid) != PLAYER_STATE_SPECTATING && GetPlayerState(playerid) != PLAYER_STATE_NONE && GetPlayerState(playerid) != PLAYER_STATE_WASTED);
 }
+
+// 修改为
+stock IsPlayerSpawnedEx(playerid)
 ```
 
 #### 6. omp-server.exe 控制台警告提示
