@@ -420,7 +420,7 @@ stock GetWeapon(playerid)
 	return 0;
 }
 ```
-应该改为
+应该改为，以告诉编译器或人们pGuns是用于储存武器ID的变量，GetWeapon函数返回的结果是武器ID
 ```pawn
 enum playerData {
     WEAPON:pGuns[13]
