@@ -38,6 +38,14 @@ SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_
 ### 回到 SA:MP
 在解决了 kyeman 回归负责和开发方向回归大型死亡竞赛风格(deathmatch-style)游戏初衷的所有问题后，项目的正式名称又重新改为 San Andreas Multiplayer(SA:MP)(圣安地列斯多人游戏)，以避免混淆，同时也避免与 Rockstar Games 就使用 "Grand Theft Auto" 商标产生任何法律纠纷。
 
+### 
+
+### SA-MP不复存在
+* 2019年11月11日 SA-MP的唯一开发者 Kalcor/kyeman 在SA-MP官方论坛上发帖：“我在这个主题上发帖的目的是让大家知道 SA-MP的开发即将结束。将不再为 SA-MP 提供更新，也许只是安全更新，我/我们不得而知”
+* 2019年11月22日 Kalcor更新了SA-MP 0.3.7-R4客户端，修复菜单系统中的安全漏洞，请不要再使用以前版本的 SA-MP客户端
+* 2020年9月下旬 SA-MP 维基百科彻底下线
+* 2022年11月16日 SA-MP 0.3.7-R5客户端更新，修复重要漏洞
+
 ### 游戏模式(Gamemode)
 在SA:MP中有多种所谓的游戏模式，这是因为游戏使用了创新的 PAWN 脚本引擎，允许任何用户在《圣安地列斯》地图中创建任务，并以特殊的文件格式提供给服务器使用--这与普遍的游戏为相同的模式设置单独关卡的方式非常相似。SA:MP的一些特色玩法包括突击（攻击/防御）、夺旗（夺取对方的车、船、自行车或飞机）、团队死亡竞赛(Team Deathmatch)、死亡竞赛(Deathmatch)、赛车(Racing)，甚至是必须拥有最多金钱（通过赌博或杀害其他玩家获得）的玩家才能获胜的模式。您还可以选择一般的自由模式(freeroam)，在这些模式中，您可以随心所欲地按照自己的目标行事。
 
@@ -62,6 +70,11 @@ SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_
 | [Sniper Madness](https://github.com/Li-ght/SA-MP-Official-Game-Mode/blob/main/sniper.pwn) | 每个人都有一把狙击步枪互相击杀的游戏模式。是对新的 SA-MP 0.2 的狙击步枪支持的某种演示. |
 | [RC Barnstorm](https://github.com/Li-ght/SA-MP-Official-Game-Mode/blob/main/barron.pwn) | 每个人都要控制一辆遥控Baron的游戏模式。是对新的 SA-MP 0.2 版遥控车支持的某种演示. |
 
+
+
+
+    
+## open.mp(Open Multiplayer)
 
 ### 什么是 open.mp？
 open.mp (Open Multiplayer, OMP) 圣安地列斯的多人游戏模组，是为了应对 SA:MP 的更新和管理问题的不幸增加而推出的，SA:MP客户端可以连接到此服务器，将来将提供新的open.mp客户端，从而可以发布更多有趣的更新
@@ -104,17 +117,8 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 ### 手机安卓版SA:MP
 目前市面上SAMP安卓客户端app使用了从SA:MP团队窃取的源代码开发完成，因此这不在我们的讨论范围之内
 
-### 特定事件历程简要概述
-* 2005年4月初 梦的开始 SA:MP最初是罪恶都市多人模式的修改版 被命名为VC:MP，由于当时圣安地列斯这款游戏在联机开发时尚未发布，因此决定将VC:MP作为SA:MP的代码库进行开发
-* 2006年5月10日 SA:MP正式发布，也是SA:MP的生日
-...
-...
-...
-* 在此之前发生了上面所提到的一些社区争议
+### open.mp历程简要概述
 * 2019年初 open.mp项目启动，并在曝光后获得了大量关注
-* 2019年11月11日 SA-MP的唯一开发者 Kalcor/kyeman 在SA-MP官方论坛上发帖：“我在这个主题上发帖的目的是让大家知道 SA-MP的开发即将结束。将不再为 SA-MP 提供更新，也许只是安全更新，我/我们不得而知”
-* 2019年11月22日 Kalcor更新了SA-MP 0.3.7-R4客户端，修复菜单系统中的安全漏洞，请不要再使用以前版本的 SA-MP客户端
-* 2020年9月下旬 SA-MP 维基百科彻底下线
 * 2021年6月 经历3年实验和改写，操之过急的工作给管理、团队和代码库带来了一些问题，我们实施的功能强大同时也很复杂，难以继续，这样我们很难按照正确的路线走下去，2021年6月，open.mp团队决定开始重写，目标是建立一个1:1的向后兼容SA:MP的程序
 * 2022年1月 首次尝试测试第一个版本，并支持PC端、GTASA最终版、安卓端同时游玩一个服务器 详情请看[Youtube视频](https://www.youtube.com/watch?v=-PWXXvHe35M)
 * 2022年4月20日 open.mp正式进入公开测试版，这是项目开源和正式版发布前的最后一步，请注意，这只是SA:MP服务器替代项目，我们的客户端仍在开发中，还有很长的路要走
