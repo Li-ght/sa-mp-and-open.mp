@@ -47,6 +47,7 @@ SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_
 ### 官方提供的游戏模式示例
 | 游戏模式 | 描述 |
 | :--| :----- |
+| [GRAND LARCENY](https://github.com/Li-ght/SA-MP-Official-Game-Mode/blob/main/grandlarc.pwn) | 地图横跨San Andreas的SA-MP 0.3 版本的自由游戏模式，拥有更多的一些脚本示例 |
 | [LVDM (aka Moneygrub)](https://github.com/Li-ght/SA-MP-Official-Game-Mode/blob/main/lvdm.pwn) | 以任何您认为合适的方式获得最多金钱的玩家即可赢得该游戏模式。由于没有任何 “真正 ”的目标，因此是一种自由游戏模式，在许多服务器中都很受欢迎。 |
 | [San Fierro TDM](https://github.com/Li-ght/SA-MP-Official-Game-Mode/blob/main/sftdm.pwn) | 在San Fierro进行的团队死亡竞赛中，您必须与您的队伍团结一致，成为得分最高的玩家. |
 | [Rivershell](https://github.com/Li-ght/SA-MP-Official-Game-Mode/blob/main/rivershell.pwn) | 一种基于在水面上游玩的夺旗模式(CTF, Capture The Flag)，在该模式中，您的团队必须在对方占领您团队的基地之前，从对方基地夺取一艘缓慢移动的船，从而赢得胜利。在 SA-MP 0.2 中，Rivershell 2 模式可用，但没有源代码. |
