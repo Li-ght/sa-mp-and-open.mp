@@ -101,7 +101,7 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 * 更高效的性能和效率，更现代化、且优雅的开发体验
 * 也将会有新的open.mp客户端体验更有趣的内容
 * 同时支持0.3.7和0.3DL客户端
-* 内置了超过150个[YSF](https://github.com/IS4Code/YSF/wiki/Natives)的native功能，可前往[open.mp文档](https://www.open.mp/docs/server/omp-functions)了解详情
+* 内置了超过150个[YSF](https://github.com/IS4Code/YSF/wiki/Natives)的native功能，可前往[open.mp功能列表](https://www.open.mp/docs/server/omp-functions)了解详情
 * 许多功能加入和大量原生功能升级，更多函数添加{Float, _}:...format的支持
 * 关于标签矫正以及[const矫正](https://github.com/pawn-lang/compiler/wiki/Const-Correctness)的规范性
 * 包含最新版本编译器3.10.12，新增功能包含见[此处](https://github.com/pawn-lang/compiler/wiki/What's-new)，修复了原版3.2.3664的所有[已知错误和BUG](https://github.com/pawn-lang/compiler/wiki/Known-compiler-bugs)，同时能检测到更多你代码里的问题或者需要改善的地方，为 SA：MP 社区提供更好的开发体验
@@ -214,17 +214,187 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 
 ### 文件迁移和config.json配置
 根据上面的文件结构，把你的文件进行复制转移即可，这里唯一值得讲解的地方只有config.json。见[JSON百度词条](https://baike.baidu.com/item/JSON/2462549?fr=ge_ala)
+
 ![—](002.png)
+
+为什么server.cfg里有写sscanf插件，而config.json没有呢，正如我上面所说，sscanf可以放在components文件夹自动加载，而无须进行配置
+
 大家可以看到，以往server.cfg的对应信息的配置，可以通过名称很快地找到config.json相应的位置
+
 并且config.json提供了大量可自定义配置的选项，不需要焦虑，保持默认设置即可，除非你知道你在干什么，一般通过名称即可知道其功能作用
-常用的比如：
-"network" : "port" 服务器端口
-"network" : "allow_037_clients" 是否允许0.3.7客户端进入服务器
-"max_bots" 最大NPC数量
-"max_players" 最大玩家数量
-"map" 地图名称
-"mode" 模式名称
-"website" 服务器网址
-"password" 服务器密码
-"artwork" : "enable" 是否启用自定义模型功能(也就是0.3DL功能)
+
+- 常用的比如：
+- "network" : "port" 服务器端口
+- "network" : "allow_037_clients" 是否允许0.3.7客户端进入服务器
+- "max_bots" 最大NPC数量
+- "max_players" 最大玩家数量
+- "map" 地图名称
+- "mode" 模式名称
+- "website" 服务器网址
+- "password" 服务器密码
+- "artwork" : "enable" 是否启用自定义模型功能(也就是0.3DL功能)
+- "exclude" 如果你不想加载components文件夹里的某个插件，你可以在此处排除它们
+  
 更多关于config.json的详情见[此处](https://www.open.mp/docs/server/config.json)，这边不一一赘述
+
+### 兼容性
+SC-RP(South Central Roleplay by Emmet)是几年前的源码，本人没有对SC-RP进行open.mp端的重新编译，仅仅只是更新了插件和库，直接把SA:MP版本的amx文件复制进open.mp服务端里，open.mp仍然可以正常开启服务器并游玩
+
+这也恰恰证明了open.mp向后兼容性的强大之处，也证明了open.mp开发和SA:MP开发保持的一致性，以便于人们对自己服务器的迁移工作，因此如上面所说，非小白人员不要浪费彼此的时间问open.mp服务器怎么开发
+
+但是为了做教程，下面依旧会讲解关于如何处理重新编译后的警告和代码规范矫正，以及其它问题的讲解，如果你是个有经验的开发人员，可以自行前往 [标签矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#more-tags)，[const矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#const-correctness)，[open.mp功能列表](https://www.open.mp/docs/server/omp-functions)，以及服务端`qawon/include`里的inc文件了解详情，自行修改优化自己的代码
+
+
+### 回调与函数名称的变化
+```pawn
+// 错误：error 025: function heading differs from prototype
+// 意思是函数标题与原型不同，应该改为和原型一致
+
+// 错误
+public OnPlayerStateChange(playerid, newstate, oldstate)
+// 改为
+public OnPlayerStateChange(playerid, PLAYER_STATE:newstate, PLAYER_STATE:oldstate)
+
+// 错误
+public OnPlayerEditAttachedObject(playerid, response, index, modelid, boneid, Float:fOffsetX, Float:fOffsetY, Float:fOffsetZ, Float:fRotX, Float:fRotY, Float:fRotZ, Float:fScaleX, Float:fScaleY, Float:fScaleZ)
+// 改为
+public OnPlayerEditAttachedObject(playerid, EDIT_RESPONSE:response, index, modelid, boneid, Float:fOffsetX, Float:fOffsetY, Float:fOffsetZ, Float:fRotX, Float:fRotY, Float:fRotZ, Float:fScaleX, Float:fScaleY, Float:fScaleZ)
+
+// 错误
+public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
+// 改为
+public OnPlayerKeyStateChange(playerid, KEY:newkeys, KEY:oldkeys)
+
+// 错误
+public OnPlayerDeath(playerid, killerid, reason)
+// 改为
+public OnPlayerDeath(playerid, killerid, WEAPON:reason)
+```
+### 警告与错误
+
+#### 1. user warning: Using <a_samp> legacy wrapper.  Include <open.mp> directly.
+
+a_samp头文件已弃用，请改为open.mp作为头文件
+
+```
+#include <open.mp>
+```
+
+#### 2. warning 213: tag mismatch:
+
+警告代码: 
+```pawn
+PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], 1);
+```
+omp_textdraw.inc里关于PlayerTextDrawFont函数：
+```pawn
+native bool:PlayerTextDrawFont(playerid, PlayerText:textid, TEXT_DRAW_FONT:font);
+```
+这里的font前面加了一个TEXT_DRAW_FONT标签，open.mp提供了关于以下font的定义分别代表(0-5)，为什么要设置这类型的标签，因为SAMP关于Textdraw的可用字体只有0-5，也就是有范围的
+
+比如：在SA:MP中如果你使用了字体6，编译器不会有任何警告，然后你进入游戏发现Textdraw显示不出来，你又不知道问题出在哪里，在这种情况下，open.mp会给提前告知你问题所在，并让你使用他们所提供的定义去设置Textdraw的字体类型，你可能会觉得多余，因为你本身能够确保自己不会使用0-5以外的字体，但是你要知道，除了字体以外，还有很多很多的关于范围的限制，比如武器ID，Textdraw对齐方式，动作同步，玩家状态等等，当脚本代码庞大，你/其它开发人员不小心填写了超出SAMP支持范围内的数据，编译器不给你任何警告，游戏内又无法正常运行你的脚本，在你不牢背这些范围的情况下，你如何能快速发现并解决问题，更重要的是，这是一种很好的习惯和规范。
+
+```pawn
+TEXT_DRAW_FONT_0
+TEXT_DRAW_FONT_1
+TEXT_DRAW_FONT_2
+TEXT_DRAW_FONT_3
+TEXT_DRAW_FONT_SPRITE_DRAW
+TEXT_DRAW_FONT_MODEL_PREVIEW
+```
+解决方式：
+```pawn
+// 警告 warning 213: tag mismatch: expected tag "t_TEXT_DRAW_FONT", but found none ("_")
+PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], 1);
+
+// 应该改为
+PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], TEXT_DRAW_FONT_1);
+```
+
+诸如此类的警告还有（不一一列举）：
+
+```pawn
+// 警告 warning 213: tag mismatch: expected tag "t_SPECIAL_ACTION", but found none ("_")
+SetPlayerSpecialAction(playerid, 68);
+
+// 应该改为
+SetPlayerSpecialAction(playerid, SPECIAL_ACTION_PISSING);
+```
+
+```pawn
+// 警告 warning 213: tag mismatch: expected tag "bool", but found none ("_")
+// 警告 warning 213: tag mismatch: expected tag "t_FORCE_SYNC", but found none ("_")
+ApplyAnimation(playerid, "KISSING", "Grlfrd_Kiss_01", 4.1, 0, 0, 0, 0, 0, 1);
+
+// 应该改为
+ApplyAnimation(playerid, "KISSING", "Grlfrd_Kiss_01", 4.1, false, false, false, false, 0, SYNC_ALL);
+```
+
+```pawn
+// 警告 warning 213: tag mismatch: expected tag "t_WEAPON_SLOT", but found none ("_")
+// 警告 warning 213: tag mismatch: expected tag "t_WEAPON", but found none ("_")
+new weaponid, ammo;
+for (new i = 0; i < 13; i ++)
+{
+    GetPlayerWeaponData(playerid, i, weaponid, ammo);
+}
+
+// 改为
+new WEAPON:weaponid, ammo;
+for (new WEAPON_SLOT:i = WEAPON_SLOT:0; i < WEAPON_SLOT:13; i ++)
+{
+    GetPlayerWeaponData(playerid, i, weaponid, ammo);
+}
+```
+
+```pawn
+// 警告 warning 213: tag mismatch: expected tag "t_KEY", but found none ("_")
+if (newkeys & 16)
+
+// 改为
+if (newkeys & KEY_SECONDARY_ATTACK)
+```
+
+```pawn
+// 警告: warning 213: tag mismatch: expected tag "bool", but found none ("_")
+SetPlayerControllable(playerid, 1);
+
+// 改为:
+SetPlayerControllable(playerid, true);
+```
+
+#### 3. warning 213: tag mismatch: 依旧是标签问题，但是是自定义函数
+比如:
+```pawn
+enum playerData {
+    pGuns[13]
+};
+new PlayerData[MAX_PLAYERS][playerData];
+
+stock GetWeapon(playerid)
+{
+	new weaponid = GetPlayerWeapon(playerid);
+
+	if (1 <= weaponid <= 46 && PlayerData[playerid][pGuns][g_aWeaponSlots[weaponid]] == weaponid)
+ 		return weaponid;
+
+	return 0;
+}
+```
+应该改为
+```pawn
+enum playerData {
+    WEAPON:pGuns[13]
+};
+new PlayerData[MAX_PLAYERS][playerData];
+
+stock WEAPON:GetWeapon(playerid)
+{
+	new WEAPON:weaponid = GetPlayerWeapon(playerid);
+
+	if (WEAPON_BRASSKNUCKLE <= weaponid <= WEAPON_PARACHUTE && PlayerData[playerid][pGuns][g_aWeaponSlots[weaponid]] == weaponid)
+ 		return weaponid;
+
+	return 0;
+}
+```
