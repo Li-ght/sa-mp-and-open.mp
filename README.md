@@ -479,5 +479,29 @@ stock IsPlayerSpawned(playerid)
 	return (!PlayerData[playerid][pKilled]) && (GetPlayerState(playerid) != PLAYER_STATE_SPECTATING && GetPlayerState(playerid) != PLAYER_STATE_NONE && GetPlayerState(playerid) != PLAYER_STATE_WASTED);
 }
 ```
-#### 6. 不要着急
+
+#### omp-server.exe 控制台警告提示
+```
+[Warning] Legacy key `hostname` supplied, using `name`
+[Warning] Legacy key `weburl` supplied, using `website`
+```
+只需要按照提示修改即可，这里是指修改rcon指令的名称：
+```pawn
+#define SERVER_NAME    "[0.3.7] South Central Roleplay - www.scroleplay.net"
+#define SERVER_URL     "www.scroleplay.net"
+
+//SA:MP
+new rcon[80];
+format(rcon, sizeof(rcon), "hostname %s", SERVER_NAME);
+SendRconCommand(rcon);
+format(rcon, sizeof(rcon), "weburl %s", SERVER_URL);
+SendRconCommand(rcon);
+
+// 改为open.mp的写法
+// 这里不需要跟上面一样进行format处理，open.mp有大量函数自带format功能，非常方便快捷，如下所示：
+SendRconCommand("name %s", SERVER_NAME);
+SendRconCommand("website %s", SERVER_URL);
+```
+
+#### 7. 不要着急
 当你的脚本最终把错误修复完成之后，只剩下一些不影响编译结果和功能效果的警告时，你可以在日后的日子里慢慢地调整，同时在创建新的功能玩法时，时刻注意代码规范，养成良好的习惯，有利于代码的可读性、代码的安全性、多人协作、社区开源等等多方面
