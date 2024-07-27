@@ -163,11 +163,9 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 
 
 
-
-
 ## 教程
 本教程将使用SC-RP(South Central Roleplay by Emmet)作为例子，一步步告诉大家如何把自己手里的sa-mp服务器转为open.mp服务器
-
+![—](000.jpeg)
 
 ### 阅读此教程之前 你需要知道一下几点关键信息
 - 从sa-mp转向open.mp并不是一件困难的事情，但很多人似乎对于这两者之间的区别有较大的误解，为了让接下来的步骤能顺利进行，请先阅读前面提及的一些你可能需要了解的内容，好让自己能够更好的确定是否要升级成open.mp
@@ -176,10 +174,11 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 - 关于open.mp插件的兼容问题（不支持内存黑客插件），很多人可能会有负面的一些看法，你是否应该使用内存黑客插件，老实说，这是一个灰色地带，使用内存黑客来钩住回调或函数似乎可以接受，但任何修改服务器内存的操作似乎都是禁止的，关于插件开发请前往[open.mp插件指南](https://www.open.mp/docs/tutorials/PluginDevelopmentGuide)，对于插件的使用需求，因人而异，你应该就open.mp与samp的优劣对比，认真考虑你所使用的插件是否是必要的
 - SAMP已成为过去式，从长远来看，升级能让服务器在某些方面能朝好的方向发展，升级open.mp是一件一劳永逸的事情
 
-
 ### 下载最新版本open.mp服务端
 - [open.mp服务端](https://github.com/openmultiplayer/open.mp/releases)
-- 插件更新：如果你的服务器有使用到以下这些插件/库，请更新至open.mp版本或者是最新版，下面列表也许不全，有疑问请及时在群里发问
+
+### 插件更新：
+- 如果你的服务器有使用到以下这些插件/库，请更新至open.mp版本或者是最新版，下面列表也许不全，有疑问请及时在群里发问
   - [sscanf](https://github.com/Y-Less/sscanf/releases) 将字符串转换为多个值、整数、浮点数、玩家等
   - [Pawn.CMD](https://github.com/katursis/Pawn.CMD/releases) 比任何其他指令处理器都快
   - [Pawn.RakNet](https://github.com/katursis/Pawn.RakNet/releases) 允许您分析 RakNet 流量
@@ -190,9 +189,42 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
   - [sa-mp-fixes](https://github.com/pawn-lang/sa-mp-fixes) 对SA:MP服务器的大量错误进行了优化修复，即插即用
   - [samp-precise-timers](https://github.com/bmisiak/samp-precise-timers/releases) 改善SA:MP的计时器，使其精准，在SA:MP中计时器每秒会有100毫秒左右甚至更多的偏差，比如你设置10秒后发送一条消息，SA:MP可能会在11、12、13秒后才发送
 - 其它常用库/插件的更新，现在常用且流行的库/插件很多都已更新，认同并遵循社区对于开发所树立的代码规范，请不要再埋怨，跟上脚步
-  - 这些库主要更新的内容除了更新、修复、优化它们本身的内容以外，还做了[标签矫正](https://github.com/pawn-lang/samp-stdlib/tree/consistency-overhaul?tab=readme-ov-file#more-tags)，[const矫正](https://github.com/pawn-lang/compiler/wiki/Const-Correctness)，函数变化等等，比如大家很熟悉的[streamer插件](https://github.com/samp-incognito/samp-streamer-plugin)
+  - 这些库主要更新的内容除了更新、修复、优化它们本身的内容以外，还做了[标签矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#more-tags)，[const矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#const-correctness)，函数变化等等，比如大家很熟悉的[streamer插件](https://github.com/samp-incognito/samp-streamer-plugin)
   - 以防有人找不到下载地址，大家可以直接在Github上搜索，或者前往[open.mp Awesome](https://www.open.mp/docs/awesome)，open.mp官网给大家提供了一系列值得推荐的库/插件/工具等等的列表，本人不建议大家继续使用一些过时且偏门的插件和库，请自行做取舍
   
+### 为什么分open.mp版插件和SA:MP插件
+你只需要知道open.mp版的插件直接放进`components`文件夹即可，其它插件放进`plugins`文件夹，就像SA:MP服务器一样，而放进`components`文件夹的open.mp插件会在服务器启动的时候自动加载，无需写进服务器配置里
 
+### open.mp服务端和SA:MP服务端的区别
+![—](001.png)
+|   | open.mp | SA:MP |
+| :-- | :-- | :----- |
+| 区别 |   |   |
+| 启动服务器 | omp-server.exe | samp-server.exe |
+| 服务器配置 | config.json | server.cfg |
+| 插件 | omp版本插件放在components文件夹，其它插件放在plugins文件夹 | 统一放在plugins文件夹 |
+| 编译器 | qawno文件夹 | pawno文件夹 |
+| 一致 |   |   |
+| 游戏模式 | 放至gamemodes文件夹 | 放至gamemodes文件夹 |
+| 脚本 | 放至filterscripts文件夹 | 放至filterscripts文件夹 |
+| 脚本文件 | scriptfiles文件夹 | scriptfiles文件夹 |
+| 自定义model | models文件夹 | models文件夹 |
 
+所以文件结构尽管有一点小的区别，但大家是很熟悉的且秒懂的
 
+### 文件迁移和config.json配置
+根据上面的文件结构，把你的文件进行复制转移即可，这里唯一值得讲解的地方只有config.json。见[JSON百度词条](https://baike.baidu.com/item/JSON/2462549?fr=ge_ala)
+![—](002.png)
+大家可以看到，以往server.cfg的对应信息的配置，可以通过名称很快地找到config.json相应的位置
+并且config.json提供了大量可自定义配置的选项，不需要焦虑，保持默认设置即可，除非你知道你在干什么，一般通过名称即可知道其功能作用
+常用的比如：
+"network" : "port" 服务器端口
+"network" : "allow_037_clients" 是否允许0.3.7客户端进入服务器
+"max_bots" 最大NPC数量
+"max_players" 最大玩家数量
+"map" 地图名称
+"mode" 模式名称
+"website" 服务器网址
+"password" 服务器密码
+"artwork" : "enable" 是否启用自定义模型功能(也就是0.3DL功能)
+更多关于config.json的详情见[此处](https://www.open.mp/docs/server/config.json)，这边不一一赘述
