@@ -15,6 +15,8 @@
 
 [samp旧论坛备份](https://sampforum.blast.hk/)
 
+[sa-mp服务器转open.mp服务器 教程与帮助](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)
+
 推荐大家加入我们QQ群和QQ频道以获得最新资讯和支持，打造互相探讨学习交流的净地
 
 ## San Andreas Multiplayer
