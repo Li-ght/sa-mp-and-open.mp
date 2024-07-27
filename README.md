@@ -23,7 +23,6 @@
 ### 背景信息
 SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_City)的多人游戏修改版，2005 年 4 月初被命名为Vice City Multiplayer([VC:MP](https://vc-mp.org/))。由于团队开始工作时，即将推出的《圣安地列斯》游戏尚未发布，因此决定将 VC:MP 作为 SA:MP 的代码库进行开发。该团队由GTA modding社区的一些知名成员组成，由GTA modding社区的杰出人物 kyeman 领导。通过提供预览视频和截图来展示正在进行的开发工作，该模组很快在GTA modding中赢得了大批粉丝，其小型论坛在更换新家之前吸引了大约 120 名用户。VC:MP 经过几次公开测试后，获得了极高的关注度（以至于在测试服务器上等待很长时间都是很常见的事），最终以热烈的反响发布，并从 v0.1 升级到 v0.1d，同时正在发布开源代码。现在，在 SA:MP 的主要团队工作期间，另一位社区成员利用该源代码推进 VC:MP。
 
-
 ### 多人合作模式的失败
 2005年6月10日《圣安地列斯》PC版发售后，开发团队继续以《VC:MP》相同的方式开展工作--私下工作，定期在网站上发布截图和视频，并通过论坛回答玩家的问题（论坛最终从小型主机转变为最大的GTA社区GTANet/GTA Forums的子论坛，同时也是IRC频道的主机）。一切都在预料之中，直到发生了一件出乎社区意料且不受欢迎的事情：开发团队决定，为了保持《圣安地列斯》的原汁原味，MOD 的开发路线将彻底改变--不再是支持大量玩家的死亡竞赛式(Deathmatch)多人游戏，而是将其完全改为仅支持 6 名玩家的多人合作式 Mod。他们的想法是，你可以像单人游戏一样进行游戏--与行人、警察追逐你，并跟随不断变化的故事情节--但你的 5 个朋友会和你一起玩。这是一个非常新颖的想法，但却遭到了社区的广泛反对，GTANet 的新论坛上充斥着对 SA:MP 开发团队的仇恨，无论团队如何努力推广这个想法。像这样一个需要社区支持的大型项目，情况并不乐观。
 
@@ -36,9 +35,10 @@ SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_
 ### 回到 SA:MP
 在解决了 kyeman 回归负责和开发方向回归大型死亡竞赛风格(deathmatch-style)游戏初衷的所有问题后，项目的正式名称又重新改为 San Andreas Multiplayer(SA:MP)(圣安地列斯多人游戏)，以避免混淆，同时也避免与 Rockstar Games 就使用 "Grand Theft Auto" 商标产生任何法律纠纷。
 
-### 
+### SA-MP的生日
+2006年5月10日，San Andreas MultiPlayer 正式发布
 
-### SA-MP不复存在
+### 经历了十几年的发展，SA-MP最终不复存在
 * 2019年11月11日 SA-MP的唯一开发者 Kalcor/kyeman 在SA-MP官方论坛上发帖：“我在这个主题上发帖的目的是让大家知道 SA-MP的开发即将结束。将不再为 SA-MP 提供更新，也许只是安全更新，我/我们不得而知”
 * 2019年11月22日 Kalcor更新了SA-MP 0.3.7-R4客户端，修复菜单系统中的安全漏洞，请不要再使用以前版本的 SA-MP客户端
 * 2020年9月下旬 SA-MP 维基百科彻底下线
@@ -69,9 +69,6 @@ SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_
 | [RC Barnstorm](https://github.com/Li-ght/SA-MP-Official-Game-Mode/blob/main/barron.pwn) | 每个人都要控制一辆遥控Baron的游戏模式。是对新的 SA-MP 0.2 版遥控车支持的某种演示. |
 
 
-
-
-    
 ## open.mp(Open Multiplayer)
 
 ### 什么是 open.mp？
@@ -161,8 +158,6 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 * Y_Less
 * Zeex
 
-
-
 ## 教程
 本教程将使用SC-RP(South Central Roleplay by Emmet)作为例子，一步步告诉大家如何把自己手里的sa-mp服务器转为open.mp服务器
 ![—](000.jpeg)
@@ -244,7 +239,6 @@ SC-RP(South Central Roleplay by Emmet)是几年前的源码，本人没有对SC-
 这也恰恰证明了open.mp向后兼容性的强大之处，也证明了open.mp开发和SA:MP开发保持的一致性，以便于人们对自己服务器的迁移工作，因此如上面所说，非小白人员不要浪费彼此的时间问open.mp服务器怎么开发
 
 但是为了做教程，下面依旧会讲解关于如何处理重新编译后的警告和代码规范矫正，以及其它问题的讲解，如果你是个有经验的开发人员，可以自行前往 [标签矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#more-tags)，[const矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#const-correctness)，[open.mp功能列表](https://www.open.mp/docs/server/omp-functions)，以及服务端`qawon/include`里的inc文件了解详情，自行修改优化自己的代码
-
 
 ### 回调与函数名称的变化
 ```pawn
