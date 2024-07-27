@@ -148,7 +148,8 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 * 2023年1月10日 open.mp正式开源
 * 2023年11月11日 open.mp正式版v1.1.0.2612发布，open.mp启动器(不要跟客户端混淆)发布
 * 2024年1月29日 open.mp v1.2.0.2670发布 open.mp启动器1.0重新设计并发布
-
+* 2024年4月5日 [FCNPC(完全可控的NPC插件)](https://pd.qq.com/s/fnhuny9rs)的open.mp版本正式开发，敬请期待
+  
 ### 感谢open.mp团队的每一位成员
 * Amir
 * Cheaterman
