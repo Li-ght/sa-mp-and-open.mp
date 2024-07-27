@@ -445,6 +445,10 @@ if (PlayerData[userid][pGuns][g_aWeaponSlots[weaponid]] != 0)
 // 改为
 if (PlayerData[userid][pGuns][g_aWeaponSlots[weaponid]] != WEAPON_FIST) // WEAPON_FIST 即是拳头的定义
 	return SendErrorMessage(playerid, "That player has a weapon in the same slot already.");
+
+// 或者改为
+if (PlayerData[userid][pGuns][g_aWeaponSlots[weaponid]] != WEAPON:0) // 但显然上面的写法更优雅 虽然麻烦了点
+	return SendErrorMessage(playerid, "That player has a weapon in the same slot already.");
 ```
 
 #### 4. warning 239: literal array/string passed to a non-const parameter
