@@ -178,6 +178,11 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 本教程将使用SC-RP(South Central Roleplay by Emmet)作为例子，一步步告诉大家如何把自己手里的sa-mp服务器转为open.mp服务器
 ![—](000.jpeg)
 
+### 编写脚本的编辑器推荐
+顺带提一下，这边推荐使用[VS Code](https://code.visualstudio.com/)(Visual Studio Code)作为你编写脚本的编辑器，以便于接下来的操作能进行快速查找、跳转、编辑等等
+
+VS Code的使用教程点击[此处](https://tieba.baidu.com/p/8035593934)查看
+
 ### 阅读此教程之前 你需要知道一下几点关键信息
 - 从sa-mp转向open.mp并不是一件困难的事情，但很多人似乎对于这两者之间的区别有较大的误解，为了让接下来的步骤能顺利进行，请先阅读前面提及的一些你可能需要了解的内容，好让自己能够更好的确定是否要升级成open.mp
 - 大多数老的开源图，使用了旧版的[YSI](https://github.com/pawn-lang/YSI-Includes)，不管你是否升级到open.mp，此项升级是相当必要的
@@ -259,6 +264,7 @@ SC-RP(South Central Roleplay by Emmet)是几年前的源码，本人没有对SC-
 但是为了做教程，下面依旧会讲解关于如何处理重新编译后的警告和代码规范矫正，以及其它问题的讲解，如果你是个有经验的开发人员，可以自行前往 [标签矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#more-tags)，[const矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#const-correctness)，[open.mp功能列表](https://www.open.mp/docs/server/omp-functions)，以及服务端`qawon/include`里的inc文件了解详情，自行修改优化自己的代码
 
 ### 回调与函数名称的变化
+你需要前往`qawno/include`文件夹查看open.mp提供的inc里的原型名称
 ```pawn
 // 错误：error 025: function heading differs from prototype
 // 意思是函数标题与原型不同，应该改为和原型一致
