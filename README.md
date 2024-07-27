@@ -44,8 +44,8 @@ SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_
 ### 创建游戏模式
 创建游戏模式的范围很广，从简单地将地图坐标放入PAWNO编辑器中编译，到创建包含出生点、各种目标、自定义游戏指令的完整成熟的任务，不一而足。
 
-### Official Gamemodes
-| Gamemode | Description |
+### 官方提供的游戏模式示例
+| 游戏模式 | 描述 |
 | :--| :----- |
 | LVDM (aka Moneygrub) | 以任何您认为合适的方式获得最多金钱的玩家即可赢得该游戏模式。由于没有任何 “真正 ”的目标，因此是一种自由游戏模式，在许多服务器中都很受欢迎。 |
 | San Fierro TDM | 在San Fierro进行的团队死亡竞赛中，您必须与您的队伍团结一致，成为得分最高的玩家. |
