@@ -28,6 +28,9 @@
 ## San Andreas Multiplayer
 圣安地列斯多人游戏（简称 SA:MP）是《侠盗猎车手：圣安地列斯》电脑游戏的第三方多人游戏模组。圣安地列斯多人游戏是由《侠盗猎车手》系列游戏的忠实粉丝组成的团队开发的，他们利用业余时间开发 SA:MP 是他们的业余爱好。
 
+### SA:MP下载地址
+[SAMP联机工具/服务端下载地址](https://www.sa-mp.mp/)
+
 ### 背景信息
 SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_City)的多人游戏修改版，2005 年 4 月初被命名为Vice City Multiplayer([VC:MP](https://vc-mp.org/))。由于团队开始工作时，即将推出的《圣安地列斯》游戏尚未发布，因此决定将 VC:MP 作为 SA:MP 的代码库进行开发。该团队由GTA modding社区的一些知名成员组成，由GTA modding社区的杰出人物 kyeman 领导。通过提供预览视频和截图来展示正在进行的开发工作，该模组很快在GTA modding中赢得了大批粉丝，其小型论坛在更换新家之前吸引了大约 120 名用户。VC:MP 经过几次公开测试后，获得了极高的关注度（以至于在测试服务器上等待很长时间都是很常见的事），最终以热烈的反响发布，并从 v0.1 升级到 v0.1d，同时正在发布开源代码。现在，在 SA:MP 的主要团队工作期间，另一位社区成员利用该源代码推进 VC:MP。
 
@@ -81,6 +84,10 @@ SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_
 
 ### 什么是 open.mp？
 open.mp (Open Multiplayer, OMP) 圣安地列斯的多人游戏模组，是为了应对 SA:MP 的更新和管理问题的不幸增加而推出的，SA:MP客户端可以连接到此服务器，将来将提供新的open.mp客户端，从而可以发布更多有趣的更新
+
+### open.mp下载地址
+[open.mp服务端下载地址](https://github.com/openmultiplayer/open.mp/releases)
+[open.mp启动器下载地址](https://github.com/openmultiplayer/launcher/releases/tag/v1.0.0)
 
 ### open.mp是SA:MP的分支吗?
 不是，这是一次利用的几十年的知识和经验进行的彻底的重写，之前有人试图制作SA:MP分支版本，但我们认为有两个主要的问题：
