@@ -446,6 +446,9 @@ stock ShowPlayerFooter(playerid, const string[])
 ```
 此项修正也可以修复错误：error 035: argument type mismatch (argument 2)
 
+#### 4.1 error 035: argument type mismatch (argument 2)
+如上
+
 #### 5. error 021: symbol already defined:
 前面提到过，open.mp提供了许多新的函数功能，因此你的SA:MP脚本中可能会有一些自定义的函数和open.mp提供的函数重名了，在确保你的自定义函数的功能和open.mp提供的功能一致的情况下，删除你自己的自定义函数，改为使用open.mp的函数。否则请把你的函数名以及使用到该函数的地方修改成其它的名称
 ```pawn
