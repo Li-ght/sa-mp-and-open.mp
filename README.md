@@ -17,7 +17,7 @@
 
 [samp旧论坛备份](https://sampforum.blast.hk/)
 
-推荐大家加入我们[QQ群]((https://qm.qq.com/q/hgf1H1bReg))和[QQ频道]((https://pd.qq.com/s/3upf7y7oo))以获得最新资讯和支持，打造互相探讨学习交流的净地
+推荐大家加入我们[QQ群](https://qm.qq.com/q/hgf1H1bReg)和[QQ频道](https://pd.qq.com/s/3upf7y7oo)以获得最新资讯和支持，打造互相探讨学习交流的净地
 
 此篇文档的版本号为1.0，是首版本，因此可能会有纰漏的部分，后续发现问题将会更新，如果你发现[迁移open.mp的教程](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)无法解决你的某些问题，请及时和本人联系。
 
@@ -528,7 +528,7 @@ SendRconCommand("website %s", SERVER_URL);
 当你的脚本最终把错误修复完成之后，只剩下一些不影响编译结果和功能效果的警告时，你可以在日后的日子里慢慢地调整，同时在创建新的功能玩法时，时刻注意代码规范，养成良好的习惯，有利于代码的可读性、代码的安全性、多人协作、社区开源等等多方面
 
 #### 8. 结尾
-推荐大家加入我们[QQ群]((https://qm.qq.com/q/hgf1H1bReg))和[QQ频道]((https://pd.qq.com/s/3upf7y7oo))以获得最新资讯和支持，打造互相探讨学习交流的净地
+推荐大家加入我们[QQ群](https://qm.qq.com/q/hgf1H1bReg)和[QQ频道](https://pd.qq.com/s/3upf7y7oo)以获得最新资讯和支持，打造互相探讨学习交流的净地
 
 此篇文档的版本号为1.0，是首版本，因此可能会有纰漏的部分，后续发现问题将会更新，如果你发现以上教程无法解决你的某些问题，请及时和本人联系。
 
