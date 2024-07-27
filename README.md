@@ -480,7 +480,7 @@ stock IsPlayerSpawned(playerid)
 }
 ```
 
-#### omp-server.exe 控制台警告提示
+#### 6. omp-server.exe 控制台警告提示
 ```
 [Warning] Legacy key `hostname` supplied, using `name`
 [Warning] Legacy key `weburl` supplied, using `website`
