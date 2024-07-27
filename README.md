@@ -337,6 +337,8 @@ PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], TEXT_DRAW_FON
 
 诸如此类的警告还有（不一一列举）：
 
+警告 warning 213: tag mismatch: expected tag "xxxx", but found none ("_")
+ 
 ```pawn
 // 警告 warning 213: tag mismatch: expected tag "t_SPECIAL_ACTION", but found none ("_")
 SetPlayerSpecialAction(playerid, 68);
@@ -378,6 +380,8 @@ if (newkeys & 16)
 // 改为
 if (newkeys & KEY_SECONDARY_ATTACK)
 ```
+
+警告: warning 213: tag mismatch: expected tag "bool", but found none ("_")
 
 ```pawn
 // 警告: warning 213: tag mismatch: expected tag "bool", but found none ("_")
