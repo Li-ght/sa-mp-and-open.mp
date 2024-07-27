@@ -47,19 +47,20 @@ SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_
 ### Official Gamemodes
 | Gamemode | Description |
 | :--| :----- |
-| LVDM (aka Moneygrub) | Win this gamemode by being the player with the most money, obtained in any way you see fit. A popular gamemode on many servers due to its lack of any 'real' objective, making it a freeroam mode |
-| San Fierro TDM | A Team Deathmatch based in San Fierro, where you must stick with your team to become the player with the highest score. |
-| Rivershell | A water-based CTF gamemode, where your team must win by capturing a slow moving boat from the opposing team's base before they capture your teams'. In SA-MP 0.2, Rivershell 2 mode is available, but without the source code. |
-| Local Yokel SE | The same as Rivershell, but based on land using sports cars (the SE standing for sports edition) |
-| Cops 'n' Gangs | Another CTF mode, this time between the Los Santos Police Department and a local gang - the objective vehicle being a slow-moving van. |
-| Area 51 | An attack gamemode, where attackers must break into Area 69 by parachuting while the military and scientists defend. In this gamemode, Area 69 is referenced as Area 51 (its real prototype in Nevada). |
-| Freighter | A water-based version of the Area 51 mode, where Triads must break into a rival gang's (the Da Nang Boys') freight ship, using speedboats and helicopters. |
-| Manhunt-LV | One person is chosen to be the 'hunted' person, while everyone else must chase him down and kill him. The person who kills the 'hunted' becomes the hunted himself. |
-| LS Parachute | A fun gamemode with no objective other than to parachute off tall buildings - popular by people making gameplay videos
-| Minigun Madness | Another fun mode, made to give people a break from the standard objective-based modes. All the players are locked in a small compound in a free-for-all with only miniguns to defend themselves. |
-| Monster | A freeroam mode where everyone spawns at the desert airstrip with only monster trucks for transport. Was popular during private Beta testing to demonstrate the game's stability and sync |
-| Sniper Madness | A game mode where everyone is given a sniper rifle to kill each other. Was some kind of a demo of new SA-MP 0.2's sniper rifle support. |
-| RC Barnstorm | A game mode where everyone is controlling a 'radio controllable' RC Baron. Was some kind of a demo of new SA-MP 0.2's RC vehicles support. |
+| LVDM (aka Moneygrub) | 以任何您认为合适的方式获得最多金钱的玩家即可赢得该游戏模式。由于没有任何 “真正 ”的目标，因此是一种自由游戏模式，在许多服务器中都很受欢迎。 |
+| San Fierro TDM | 在San Fierro进行的团队死亡竞赛中，您必须与您的队伍团结一致，成为得分最高的玩家. |
+| Rivershell | 一种基于在水面上游玩的夺旗模式(CTF, Capture The Flag)，在该模式中，您的团队必须在对方占领您团队的基地之前，从对方基地夺取一艘缓慢移动的船，从而赢得胜利。在 SA-MP 0.2 中，Rivershell 2 模式可用，但没有源代码. |
+| Local Yokel SE | 与 Rivershell 相同，但以陆上跑车为基础（SE 代表运动版） |
+| Cops 'n' Gangs | 另一种夺旗模式(CTF, Capture The Flag)，这次是在Los Santos警察局和当地帮派之间进行，目标车辆是一辆缓慢行驶的面包车. |
+| Area 51 | 这是一种进攻游戏模式，攻击者必须通过跳伞闯入 69 区，而军方和科学家则进行防守。在该游戏模式中，69 区被称为 51 区（其真实原型位于内华达州）. |
+| Freighter | 51 区模式的水上版本，三合会必须使用快艇和直升机闯入敌对帮派（岘港男孩）的货运船. |
+| Manhunt-LV | 其中一名玩家被选为 “被狩猎对象”，其他人必须追上并杀死他。杀死 “被狩猎对象 ”的人自己也会成为 “被狩猎对象”. |
+| LS Parachute | 一个有趣的游戏模式，除了从高楼跳伞外没有其他目标--受到制作游戏视频的人的欢迎 |
+| Minigun Madness | 这是另一种有趣的模式，让玩家从标准的基于目标的游戏模式中解脱出来。所有玩家都被关在一个小院子里进行自由混战，只能用加特林防卫。 |
+| Monster | 一种自由模式，每个人都会在沙漠简易机场出生，只有怪物卡车(monster)可以作为交通工具。在私人 Beta 测试期间很受欢迎，以展示游戏的稳定性和同步性 |
+| Sniper Madness | 每个人都有一把狙击步枪互相击杀的游戏模式。是对新的 SA-MP 0.2 的狙击步枪支持的某种演示. |
+| RC Barnstorm | 每个人都要控制一辆遥控Baron的游戏模式。是对新的 SA-MP 0.2 版遥控车支持的某种演示. |
+
 
 ### 什么是 open.mp？
 open.mp (Open Multiplayer, OMP) 圣安地列斯的多人游戏模组，是为了应对 SA:MP 的更新和管理问题的不幸增加而推出的，SA:MP客户端可以连接到此服务器，将来将提供新的open.mp客户端，从而可以发布更多有趣的更新
