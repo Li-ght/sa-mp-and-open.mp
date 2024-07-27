@@ -184,6 +184,7 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
   - [Pawn.RakNet](https://github.com/katursis/Pawn.RakNet/releases) 允许您分析 RakNet 流量
   - [YSI](https://github.com/pawn-lang/YSI-Includes) 正如之前所说，不论你正在使用open.mp还是SA:MP，都请更新到最新版
   - [Pawn.Regex](https://github.com/katursis/Pawn.Regex/releases) 在 Pawn 中添加对正则表达式的支持
+  - [progress2](https://github.com/Southclaws/progress2/tree/master) 非常方便快捷地创建进度条UI
 - 如果你服务器正在使用以下这些插件/库，现在你可以删除他们了，因为open.mp具备这些功能
   - [YSF](https://github.com/IS4Code/YSF/releases) 它的许多功能现在已经在 open.mp 中实现，详情见[此处](https://github.com/openmultiplayer/open.mp/issues/189)
   - [sa-mp-fixes](https://github.com/pawn-lang/sa-mp-fixes) 对SA:MP服务器的大量错误进行了优化修复，即插即用
@@ -270,7 +271,20 @@ public OnPlayerDeath(playerid, killerid, reason)
 // 改为
 public OnPlayerDeath(playerid, killerid, WEAPON:reason)
 ```
+
+```pawn
+// 警告：warning 234: function is deprecated (symbol "xxxxxxxxx") Use `xxxxxxxxx`
+// 表示函数名字已弃用，虽然你可以继续使用此函数名称，但是建议进行更换
+
+// 如
+PlayerTextDrawColor(playerid, textid, -1);
+// 改为
+PlayerTextDrawColour(playerid, textid, -1);
+```
+
 ### 警告与错误
+
+警告不是错误，如果你收到警告，它们表示可能会有问题，但你的代码仍然可以编译和运行，警告的目的是防止出现错误，以免代码在某些情况下无法按照您的预期运行--您的代码仍然可以编译，警告只是一条信息，很多人认为，警告意味着代码没有编译，或者运行时会有不同的表现。其实不然。你可以有上千条
 
 #### 1. user warning: Using <a_samp> legacy wrapper.  Include <open.mp> directly.
 
@@ -280,19 +294,18 @@ a_samp头文件已弃用，请改为open.mp作为头文件
 #include <open.mp>
 ```
 
-#### 2. warning 213: tag mismatch:
-
-警告代码: 
+#### 2. warning 213: tag mismatch: 
+如下面这行代码会引起警告：
 ```pawn
 PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], 1);
 ```
-omp_textdraw.inc里关于PlayerTextDrawFont函数：
+让我们先看看 `omp_textdraw.inc` 里关于`PlayerTextDrawFont`函数的说明：
 ```pawn
 native bool:PlayerTextDrawFont(playerid, PlayerText:textid, TEXT_DRAW_FONT:font);
 ```
-这里的font前面加了一个TEXT_DRAW_FONT标签，open.mp提供了关于以下font的定义分别代表(0-5)，为什么要设置这类型的标签，因为SAMP关于Textdraw的可用字体只有0-5，也就是有范围的
+这里的font前面加了一个`TEXT_DRAW_FONT`标签，open.mp提供了关于以下font的定义分别代表(0-5)，为什么要设置这类型的标签，因为SAMP关于Textdraw的可用字体只有0-5，也就是有范围的
 
-比如：在SA:MP中如果你使用了字体6，编译器不会有任何警告，然后你进入游戏发现Textdraw显示不出来，你又不知道问题出在哪里，在这种情况下，open.mp会给提前告知你问题所在，并让你使用他们所提供的定义去设置Textdraw的字体类型，你可能会觉得多余，因为你本身能够确保自己不会使用0-5以外的字体，但是你要知道，除了字体以外，还有很多很多的关于范围的限制，比如武器ID，Textdraw对齐方式，动作同步，玩家状态等等，当脚本代码庞大，你/其它开发人员不小心填写了超出SAMP支持范围内的数据，编译器不给你任何警告，游戏内又无法正常运行你的脚本，在你不牢背这些范围的情况下，你如何能快速发现并解决问题，更重要的是，这是一种很好的习惯和规范。
+比如：在SA:MP中如果你使用了字体6，编译器不会有任何警告，然后你进入游戏发现Textdraw显示不出来，你又不知道问题出在哪里，在这种情况下，编译器会给提前告知你问题所在，并让你使用他们所提供的定义去设置Textdraw的字体类型，你可能会觉得多余，因为你本身能够确保自己不会使用0-5以外的字体，但是你要知道，除了字体以外，还有很多很多的关于范围的限制，比如武器ID，Textdraw对齐方式，动作同步，玩家状态等等，当脚本代码庞大，你/其它开发人员不小心填写了超出SAMP支持范围内的数据，SA:MP编译器不给你任何警告，游戏内又无法正常运行你的脚本，在你不牢背这些范围的情况下，你如何能快速发现并解决问题，更重要的是，这是一种很好的习惯和规范。
 
 ```pawn
 TEXT_DRAW_FONT_0
@@ -306,8 +319,7 @@ TEXT_DRAW_FONT_MODEL_PREVIEW
 ```pawn
 // 警告 warning 213: tag mismatch: expected tag "t_TEXT_DRAW_FONT", but found none ("_")
 PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], 1);
-
-// 应该改为
+// 改为
 PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], TEXT_DRAW_FONT_1);
 ```
 
@@ -317,7 +329,7 @@ PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], TEXT_DRAW_FON
 // 警告 warning 213: tag mismatch: expected tag "t_SPECIAL_ACTION", but found none ("_")
 SetPlayerSpecialAction(playerid, 68);
 
-// 应该改为
+// 改为
 SetPlayerSpecialAction(playerid, SPECIAL_ACTION_PISSING);
 ```
 
@@ -326,7 +338,7 @@ SetPlayerSpecialAction(playerid, SPECIAL_ACTION_PISSING);
 // 警告 warning 213: tag mismatch: expected tag "t_FORCE_SYNC", but found none ("_")
 ApplyAnimation(playerid, "KISSING", "Grlfrd_Kiss_01", 4.1, 0, 0, 0, 0, 0, 1);
 
-// 应该改为
+// 改为
 ApplyAnimation(playerid, "KISSING", "Grlfrd_Kiss_01", 4.1, false, false, false, false, 0, SYNC_ALL);
 ```
 
@@ -363,7 +375,18 @@ SetPlayerControllable(playerid, 1);
 SetPlayerControllable(playerid, true);
 ```
 
-#### 3. warning 213: tag mismatch: 依旧是标签问题，但是是自定义函数
+```pawn
+// 警告: warning 213: tag mismatch: expected tag "bool", but found none ("_")
+new engine, lights, alarm, doors, bonnet, boot, objective;
+GetVehicleParamsEx(CarData[carid][carVehicle], engine, lights, alarm, doors, bonnet, boot, objective);
+SetVehicleParamsEx(CarData[carid][carVehicle], engine, lights, alarm, 1, bonnet, boot, objective);
+
+// 改为:
+new bool:engine, bool:lights, bool:alarm, bool:doors, bool:bonnet, bool:boot, bool:objective;
+GetVehicleParamsEx(CarData[carid][carVehicle], engine, lights, alarm, doors, bonnet, boot, objective);
+SetVehicleParamsEx(CarData[carid][carVehicle], engine, lights, alarm, true, bonnet, boot, objective);
+```
+#### 3. warning 213: tag mismatch: 依旧是标签问题，但是是自定义函数或变量
 比如:
 ```pawn
 enum playerData {
@@ -395,6 +418,58 @@ stock WEAPON:GetWeapon(playerid)
 	if (WEAPON_BRASSKNUCKLE <= weaponid <= WEAPON_PARACHUTE && PlayerData[playerid][pGuns][g_aWeaponSlots[weaponid]] == weaponid)
  		return weaponid;
 
-	return 0;
+	return WEAPON_FIST;
+}
+```
+紧接上面，还有：
+```pawn
+if (PlayerData[userid][pGuns][g_aWeaponSlots[weaponid]] != 0)
+	return SendErrorMessage(playerid, "That player has a weapon in the same slot already.");
+
+// 改为
+if (PlayerData[userid][pGuns][g_aWeaponSlots[weaponid]] != WEAPON_FIST)
+	return SendErrorMessage(playerid, "That player has a weapon in the same slot already.");
+```
+
+#### 4. warning 239: literal array/string passed to a non-const parameter
+意为：字面数组/字符串传递给非const参数
+
+const表示变量不能修改，告诉编译器和开发人员，保证它在任何（有效）情况下都不能修改它，这就是所谓的常量正确性--在数据不会被修改时使用const，而在参数会被修改时不使用const。这主要只对字符串和数组有用，这样的一个const语义有时候会帮你避免一些开发时候出现的问题，帮你编写更安全可靠的代码
+
+```pawn
+stock ShowPlayerFooter(playerid, string[]) {
+	PlayerTextDrawSetString(playerid, PlayerData[playerid][pTextdraws][39], string);
+	PlayerTextDrawShow(playerid, PlayerData[playerid][pTextdraws][39]);
+}
+
+// 警告：warning 239: literal array/string passed to a non-const parameter
+// 所有使用到此函数的地方都会提示一条警告
+ShowPlayerFooter(playerid, "You have ~g~purchased~w~ a house!");
+```
+当你传递字符串给`ShowPlayerFooter`这个函数后，中途该字符串不会经过任何修改直接，直接以Textdraw形式向玩家显示，而`ShowPlayerFooter`缺少了const，则会提示警告，应该改为如下内容：
+```pawn
+stock ShowPlayerFooter(playerid, const string[])
+```
+此项修正也可以修复错误：error 035: argument type mismatch (argument 2)
+
+#### 5. error 021: symbol already defined:
+前面提到过，open.mp提供了许多新的函数功能，因此你的SA:MP脚本中可能会有一些自定义的函数和open.mp提供的函数重名了，在确保你的自定义函数的功能和open.mp提供的功能一致的情况下，删除你自己的自定义函数，改为使用open.mp的函数。否则请把你的函数名以及使用到该函数的地方修改成其它的名称
+```pawn
+// 比如 SC-RP 里有一个 GetVehicleDriver 的函数，并且其功能效果和open.mp完全一致，删除它即可，open.mp自带这功能
+GetVehicleDriver(vehicleid) {
+	foreach (new i : Player) {
+		if (GetPlayerState(i) == PLAYER_STATE_DRIVER && GetPlayerVehicleID(i) == vehicleid) return i;
+	}
+	return INVALID_PLAYER_ID;
+}
+```
+```pawn
+// 比如 SC-RP 里有一个 IsPlayerSpawned 的函数，但是此函数里有一个 PlayerData[playerid][pKilled] 是否被杀的判定，这个时候你应该修改此函数名而不是删除它，比如修改成 IsPlayerSpawnedEx
+stock IsPlayerSpawned(playerid)
+{
+	if (playerid < 0 || playerid >= MAX_PLAYERS)
+	    return 0;
+
+	return (!PlayerData[playerid][pKilled]) && (GetPlayerState(playerid) != PLAYER_STATE_SPECTATING && GetPlayerState(playerid) != PLAYER_STATE_NONE && GetPlayerState(playerid) != PLAYER_STATE_WASTED);
 }
 ```
