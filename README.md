@@ -97,16 +97,16 @@ open.mp (Open Multiplayer, OMP) 圣安地列斯的多人游戏模组，是为了
 ### 改进和新增内容?
 open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时添加额外的功能，旨在构建1:1的SA:MP服务端还原
 * 许多古老众所周知的SAMP错误和BUG已被修复(可参考[sa-mp fixes](https://github.com/pawn-lang/sa-mp-fixes))
+* 包含大量安全、游戏行为和脚本修复
+* 更高效的性能和效率，更现代化、且优雅的开发体验
 * 也将会有新的open.mp客户端体验更有趣的内容
 * 同时支持0.3.7和0.3DL客户端
 * 内置了超过150个[YSF](https://github.com/IS4Code/YSF/wiki/Natives)的native功能，可前往[open.mp文档](https://www.open.mp/docs/server/omp-functions)了解详情
-* 包含大量安全、游戏行为和脚本修复
-* 更高效的性能和效率，更现代化的开发体验
-* 包含最新版本编译器3.10.12，修复了原版3.2.3664的所有已知错误和BUG，同时能检测到更多你代码里的问题或者需要改善的地方
-* 符号长度限制增加到了64，你不再需要缩写你的函数名，同时一些原生的sa-mp函数名的缩写也变为了阅读性更好的全称，如GetRandomCarColPair变为GetRandomVehicleColourPair，以及更加规范的命名
 * 许多功能加入和大量原生功能升级，更多函数添加{Float, _}:...format的支持
-* 关于标签矫正以及const矫正的规范性
-* 新的Pawn 编辑器[qawno编辑器](https://github.com/Zeex/qawno)包含在其中
+* 关于标签矫正以及[const矫正](https://github.com/pawn-lang/compiler/wiki/Const-Correctness)的规范性
+* 包含最新版本编译器3.10.12，修复了原版3.2.3664的所有已知错误和BUG，同时能检测到更多你代码里的问题或者需要改善的地方
+* 新的Pawn编辑器[qawno编辑器](https://github.com/Zeex/qawno)包含在其中
+* 符号长度限制增加到了64，你不再需要缩写你的函数名，同时一些原生的sa-mp函数名的缩写也变为了阅读性更好的全称，如GetRandomCarColPair变为GetRandomVehicleColourPair，以及更加规范的命名
 
 ### SA:MP兼容性
 虽然这个项目的目标是与现有的SA:MP服务器的功能接近，使移植变得容易（在我们可以开始做更有趣的事情之前，我们有很多很多的想法），但100%的兼容性是不可能的。原因很简单--SA:MP服务器有错误*。复制这些错误是愚蠢的--
@@ -118,6 +118,13 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 * 如果你是个小白，你希望能创建一个游戏模式，自己创造玩法并和朋友/陌生人一起玩耍，那你可以随意提问，我们也会耐心提供帮助
 * 虽然我很不想用“相当于samp的版本更新”去形容open.mp，因为open.mp完全从零开发的，而不是基于泄露的samp源代码更新，部分人可能会因为两者名称的不同而觉得陌生。
 * open.mp目前对于玩家而言无任何区别，请不要再问手机能不能玩omp服务器，最终版能不能玩omp服务器，这里统一回复，对于玩家而言只要能玩samp就能玩omp，并且无需做出任何改变，除非open.mp为了能够实现需要客户端配合的功能，否则，玩家照旧使用SA:MP客户端进行GTASA联机
+* open.mp服务器支持中文昵称进入吗？你可以暂时通过在脚本中添加以下代码，让你的服务器支持中文名，而不需要任何插件，后续请等待open.mp内置昵称字符的支持
+  ```pawn
+  for (new i = 0; i <= 255; i++) {
+      if (!IsNickNameCharacterAllowed(i))
+        AllowNickNameCharacter(i, true);
+    }
+  ```
 
 ### 手机安卓版SA:MP
 目前市面上SAMP安卓客户端app使用了从SA:MP团队窃取的源代码开发完成，因此这不在我们的讨论范围之内
@@ -170,8 +177,21 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 - SAMP已成为过去式，从长远来看，升级能让服务器在某些方面能朝好的方向发展，升级open.mp是一件一劳永逸的事情
 
 
-
-
 ### 下载最新版本open.mp服务端
-
 * [open.mp服务端](https://github.com/openmultiplayer/open.mp/releases)
+* 插件更新：如果你的服务器有使用到以下这些插件/库，请更新至open.mp版本或者是最新版，下面列表也许不全，有疑问请及时在群里发问
+** [sscanf](https://github.com/Y-Less/sscanf/releases)将字符串转换为多个值、整数、浮点数、玩家等
+** [Pawn.CMD](https://github.com/katursis/Pawn.CMD/releases)比任何其他指令处理器都快
+** [Pawn.RakNet](https://github.com/katursis/Pawn.RakNet/releases)允许您分析 RakNet 流量
+** [YSI](https://github.com/pawn-lang/YSI-Includes)正如之前所说，不论你正在使用open.mp还是SA:MP，都请更新到最新版
+** [Pawn.Regex](https://github.com/katursis/Pawn.Regex/releases)
+* 如果你服务器正在使用以下这些插件/库，现在你可以删除他们了，因为open.mp具备这些功能
+** [YSF](https://github.com/IS4Code/YSF/releases)它的许多功能现在已经在 open.mp 中实现，详情见[此处](https://github.com/openmultiplayer/open.mp/issues/189)
+** [sa-mp-fixes](https://github.com/pawn-lang/sa-mp-fixes)
+** [samp-precise-timers](https://github.com/bmisiak/samp-precise-timers/releases)改善SA:MP的计时器，使其精准，在SA:MP中计时器每秒会有100毫秒左右甚至更多的偏差，比如你设置10秒后发送一条消息，SA:MP可能会在11、12、13秒后才发送
+* 其它常用库/插件的更新，现在常用且流行的库/插件很多都已更新，认同并遵循open.mp团队或SA:MP社区对于代码规范所树立的规则，所以请不要再埋怨，跟上脚步
+** 以防有人找不到下载地址，大家可以直接在Github上搜索，或者前往[open.mp Awesome](https://www.open.mp/docs/awesome)，open.mp官网给大家提供了一系列值得推荐的库/插件/工具等等的列表，本人不建议大家继续使用一些过时且偏门的插件和库，请自行做取舍
+  
+
+
+https://github.com/pawn-lang/compiler/wiki/Const-Correctness
