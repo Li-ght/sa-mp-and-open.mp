@@ -430,7 +430,7 @@ if (PlayerData[userid][pGuns][g_aWeaponSlots[weaponid]] != 0)
 	return SendErrorMessage(playerid, "That player has a weapon in the same slot already.");
 
 // 改为
-if (PlayerData[userid][pGuns][g_aWeaponSlots[weaponid]] != WEAPON_FIST)
+if (PlayerData[userid][pGuns][g_aWeaponSlots[weaponid]] != WEAPON_FIST) // WEAPON_FIST 即是拳头的定义
 	return SendErrorMessage(playerid, "That player has a weapon in the same slot already.");
 ```
 
