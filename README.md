@@ -196,6 +196,8 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
   - [YSI](https://github.com/pawn-lang/YSI-Includes) 正如之前所说，不论你正在使用open.mp还是SA:MP，都请更新到最新版
   - [Pawn.Regex](https://github.com/katursis/Pawn.Regex/releases) 在 Pawn 中添加对正则表达式的支持
   - [progress2](https://github.com/Southclaws/progress2/tree/master) 非常方便快捷地创建进度条UI
+  - [weapon-config](https://github.com/oscar-broman/samp-weapon-config) 功能强大丰富的武器配置，百分百反锁血，伤害响应迅速
+  - 更多...
 - 如果你服务器正在使用以下这些插件/库，现在你可以删除他们了，因为open.mp具备这些功能
   - [YSF](https://github.com/IS4Code/YSF/releases) 它的许多功能现在已经在 open.mp 中实现，详情见[此处](https://github.com/openmultiplayer/open.mp/issues/189)
   - [sa-mp-fixes](https://github.com/pawn-lang/sa-mp-fixes) 对SA:MP服务器的大量错误进行了优化修复，即插即用
