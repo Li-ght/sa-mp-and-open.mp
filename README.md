@@ -44,6 +44,23 @@ SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_
 ### 创建游戏模式
 创建游戏模式的范围很广，从简单地将地图坐标放入PAWNO编辑器中编译，到创建包含出生点、各种目标、自定义游戏指令的完整成熟的任务，不一而足。
 
+### Official Gamemodes
+| Gamemode | Description |
+| :--| :----- |
+| LVDM (aka Moneygrub) | Win this gamemode by being the player with the most money, obtained in any way you see fit. A popular gamemode on many servers due to its lack of any 'real' objective, making it a freeroam mode |
+| San Fierro TDM | A Team Deathmatch based in San Fierro, where you must stick with your team to become the player with the highest score. |
+| Rivershell | A water-based CTF gamemode, where your team must win by capturing a slow moving boat from the opposing team's base before they capture your teams'. In SA-MP 0.2, Rivershell 2 mode is available, but without the source code. |
+| Local Yokel SE | The same as Rivershell, but based on land using sports cars (the SE standing for sports edition) |
+| Cops 'n' Gangs | Another CTF mode, this time between the Los Santos Police Department and a local gang - the objective vehicle being a slow-moving van. |
+| Area 51 | An attack gamemode, where attackers must break into Area 69 by parachuting while the military and scientists defend. In this gamemode, Area 69 is referenced as Area 51 (its real prototype in Nevada). |
+| Freighter | A water-based version of the Area 51 mode, where Triads must break into a rival gang's (the Da Nang Boys') freight ship, using speedboats and helicopters. |
+| Manhunt-LV | One person is chosen to be the 'hunted' person, while everyone else must chase him down and kill him. The person who kills the 'hunted' becomes the hunted himself. |
+| LS Parachute | A fun gamemode with no objective other than to parachute off tall buildings - popular by people making gameplay videos
+| Minigun Madness | Another fun mode, made to give people a break from the standard objective-based modes. All the players are locked in a small compound in a free-for-all with only miniguns to defend themselves. |
+| Monster | A freeroam mode where everyone spawns at the desert airstrip with only monster trucks for transport. Was popular during private Beta testing to demonstrate the game's stability and sync |
+| Sniper Madness | A game mode where everyone is given a sniper rifle to kill each other. Was some kind of a demo of new SA-MP 0.2's sniper rifle support. |
+| RC Barnstorm | A game mode where everyone is controlling a 'radio controllable' RC Baron. Was some kind of a demo of new SA-MP 0.2's RC vehicles support. |
+
 ### 什么是 open.mp？
 open.mp (Open Multiplayer, OMP) 圣安地列斯的多人游戏模组，是为了应对 SA:MP 的更新和管理问题的不幸增加而推出的，SA:MP客户端可以连接到此服务器，将来将提供新的open.mp客户端，从而可以发布更多有趣的更新
 
