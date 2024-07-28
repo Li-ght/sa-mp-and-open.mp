@@ -1,7 +1,7 @@
+# 快速导航
+### 点击[此处](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)直接跳转[sa-mp服务器转open.mp服务器 教程与帮助](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)主题
+
 # 索引
-
-## 点击[此处](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)直接跳转[sa-mp服务器转open.mp服务器 教程与帮助](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)主题
-
 [open.mp官网](https://www.open.mp/)
 
 [open.mp服务端](https://github.com/openmultiplayer/open.mp/releases)
@@ -175,9 +175,10 @@ open.mp (Open Multiplayer, OMP) 圣安地列斯的多人游戏模组，是为了
 * Y_Less
 * Zeex
 
-# 教程
+# 教程与帮助
 本教程将使用[SC-RP(South Central Roleplay by Emmet)](https://github.com/seanny/SC-RP)作为例子，一步步告诉大家如何把自己手里的sa-mp服务器转为open.mp服务器
-![—](000.jpeg)
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/d9ea03f5a2804ad1b56d997683c4ca1f.jpeg#pic_center)
 
 ### 编写脚本的编辑器推荐
 
@@ -224,7 +225,9 @@ VS Code的使用教程点击[此处](https://tieba.baidu.com/p/8035593934)查看
 你只需要知道open.mp版的插件直接放进`components`文件夹即可，其它插件放进`plugins`文件夹，就像SA:MP服务器一样，而放进`components`文件夹的open.mp插件会在服务器启动的时候自动加载，无需写进服务器配置里
 
 ### open.mp服务端和SA:MP服务端的区别
-![—](001.png)
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/777d29338294427f8e40011dda371e50.png#pic_center)
+
 |   | open.mp | SA:MP |
 | :-- | :-- | :----- |
 | 区别 |   |   |
@@ -243,7 +246,7 @@ VS Code的使用教程点击[此处](https://tieba.baidu.com/p/8035593934)查看
 ### 文件迁移和config.json配置
 根据上面的文件结构，把你的文件进行复制转移即可，这里唯一值得讲解的地方只有config.json。见[JSON百度词条](https://baike.baidu.com/item/JSON/2462549?fr=ge_ala)
 
-![—](002.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/dce04f8a7a794bb1bfde4dcc19b8beb7.png#pic_center)
 
 为什么server.cfg里有写sscanf插件，而config.json没有呢，正如我上面所说，sscanf可以放在components文件夹自动加载，而无须进行配置
 
@@ -396,9 +399,6 @@ TEXT_DRAW_FONT_MODEL_PREVIEW
 
 标签规范也包括让传递数值的类型保持一致，比如大家熟悉的SA:MP里的标签 `Text`,`PlayerText`,`bool`,`Text3D:`, open.mp新增了 `WEAPON`,`PLAYER_MARKERS_MODE`,`PLAYER_STATE`,`SPECIAL_ACTION`,`FIGHT_STYLE`,`KEY`等等，不一一列举
 
-数据类型错误也包含以下提示，解决方式和以下类似
-> error 035: argument type mismatch (argument 4)
-
 解决方式：
 ```pawn
 // 警告 warning 213: tag mismatch: expected tag "t_TEXT_DRAW_FONT", but found none ("_")
@@ -425,8 +425,8 @@ ApplyAnimation(playerid, "KISSING", "Grlfrd_Kiss_01", 4.1, 0, 0, 0, 0, 0, 1);
 // 改为
 ApplyAnimation(playerid, "KISSING", "Grlfrd_Kiss_01", 4.1, false, false, false, false, 0, SYNC_ALL);
 ```
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3a0df4d2f40b4b46a45aa8164bd955cb.png#pic_center)
 
-![—](003.png)
 
 关于武器的定义本人还是挺喜欢的，因为我记不住25，22，5，9 到底是什么武器的ID，改用定义之后，可以很清楚知道我给予了玩家什么武器，即便过了很久返回去查阅代码，也能一目了然
 
@@ -533,7 +533,8 @@ if (PlayerData[userid][pGuns][g_aWeaponSlots[weaponid]] != WEAPON_FIST) // WEAPO
 if (PlayerData[userid][pGuns][g_aWeaponSlots[weaponid]] != WEAPON:0) // 但显然上面的写法更优雅 虽然麻烦了点
 	return SendErrorMessage(playerid, "That player has a weapon in the same slot already.");
 ```
-
+#####  3.1 数据类型错误也包含以下提示，解决方式和以上类似
+> error 035: argument type mismatch (argument 4)
 ##### 4. 常量矫正
 
 warning 239: literal array/string passed to a non-const parameter
@@ -560,7 +561,7 @@ stock ShowPlayerFooter(playerid, const string[])
 ```
 此项修正也可以修复错误：error 035: argument type mismatch (argument 2)
 
-#### 4.1 error 035: argument type mismatch (argument 2)
+##### 4.1 error 035: argument type mismatch (argument 2)
 如上
 
 ##### 5. error 021: symbol already defined:
@@ -637,7 +638,3 @@ new var;
 推荐大家加入我们[QQ群](https://qm.qq.com/q/hgf1H1bReg)和[QQ频道](https://pd.qq.com/s/3upf7y7oo)以获得最新资讯和支持，打造互相探讨学习交流的净地
 
 此篇文档的版本号为1.0，是首版本，因此可能会有纰漏的部分，后续发现问题将会更新，如果你发现以上教程无法解决你的某些问题，请及时和本人联系。
-
-或者你希望补充此文档未提及到的部分，或愿意改善此文档的可读性，欢迎提交拉取，为国内社区做贡献。
-
-此文档由本人原创编写完成，制作不易，希望大家可以积极把此链接分享给更多的人以提供帮助和发挥此文档的真正作用。
