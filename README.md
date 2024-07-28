@@ -1,6 +1,6 @@
 # 索引
 
-点击[此处](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)直接跳转[sa-mp服务器转open.mp服务器 教程与帮助](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)主题
+## 点击[此处](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)直接跳转[sa-mp服务器转open.mp服务器 教程与帮助](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)主题
 
 [open.mp官网](https://www.open.mp/)
 
