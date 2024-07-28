@@ -1,4 +1,5 @@
-## 索引
+# 索引
+
 点击[此处](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)直接跳转[sa-mp服务器转open.mp服务器 教程与帮助](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B)主题
 
 [open.mp官网](https://www.open.mp/)
@@ -25,7 +26,7 @@
 
 此文档由本人原创编写完成，制作不易，希望大家可以积极把此链接分享给更多的人以提供帮助和发挥此文档的真正作用。
 
-## San Andreas Multiplayer
+# San Andreas Multiplayer
 圣安地列斯多人游戏（简称 SA:MP）是《侠盗猎车手：圣安地列斯》电脑游戏的第三方多人游戏模组。圣安地列斯多人游戏是由《侠盗猎车手》系列游戏的忠实粉丝组成的团队开发的，他们利用业余时间开发 SA:MP 是他们的业余爱好。
 
 ### SA:MP下载地址
@@ -80,7 +81,7 @@ SA:MP最初是[罪恶都市](https://gta.fandom.com/wiki/Grand_Theft_Auto:_Vice_
 | [RC Barnstorm](https://github.com/Li-ght/SA-MP-Official-Game-Mode/blob/main/barron.pwn) | 每个人都要控制一辆遥控Baron的游戏模式。是对新的 SA-MP 0.2 版遥控车支持的某种演示. |
 
 
-## open.mp(Open Multiplayer)
+# open.mp(Open Multiplayer)
 
 ### 什么是 open.mp？
 open.mp (Open Multiplayer, OMP) 圣安地列斯的多人游戏模组，是为了应对 SA:MP 的更新和管理问题的不幸增加而推出的，SA:MP客户端可以连接到此服务器，将来将提供新的open.mp客户端，从而可以发布更多有趣的更新
@@ -107,7 +108,7 @@ open.mp (Open Multiplayer, OMP) 圣安地列斯的多人游戏模组，是为了
 这不是我们的意图，在理想情况下，没有任何理由会导致社区分裂，但分裂也好过让社区枯萎。事实上，自从open.mp公布以来，大量非英文社区已经和英文社区开始接触，然而在以前，他们还在慢慢地被排挤边缘化，所以他们重新融入实际上反而是将一个分裂的社区重新团结在一起，大量用户被禁止进入SA:MP论坛(在某些情况下，他们的帖子被清除)，但Kalcor本人指出，官方论坛不是SA:MP论坛，只是SA:MP的一部分，许多玩家和服务器所有者从未在这些论坛上发帖，甚至从未加入过这些论坛，因此，再次与这些人联系将使更多的社区成员团结起来
 
 ### 改进和新增内容?
-open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时添加额外的功能，旨在构建1:1的SA:MP服务端还原
+> open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时添加额外的功能，旨在构建1:1的SA:MP服务端还原
 * 许多古老众所周知的SAMP错误和BUG已被修复(可参考[sa-mp fixes](https://github.com/pawn-lang/sa-mp-fixes))
 * 包含大量安全、游戏行为和脚本修复
 * 更高效的性能和效率，更现代化、且优雅的开发体验
@@ -125,7 +126,7 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 这个项目的另一个目标是修复和改进服务器。因此，这些目标必须得到平衡，虽然我们相信我们已经在维护向后兼容性方面做得很好，但仍有一些地方原来的行为不太正确（或根本就是坏的），我们已经从fixes.inc中得到了语义方面的启发。如果你想了解这些变化的完整列表，你可以查看fixes.inc的readme（那些已经在使用该include的人现在可以删除它），但有几个值得注意的变化被反复提起。
 
 ### open.mp其它问题解答
-重要的事情说三遍，open.mp和samp服务器开发完全一致，open.mp和samp服务器开发完全一致，open.mp和samp服务器开发完全一致
+> 重要的事情说三遍，open.mp和samp服务器开发完全一致，open.mp和samp服务器开发完全一致，open.mp和samp服务器开发完全一致
 * 如果你先前有开发过SA:MP服务器的经验，或者你不是一个小白，请不要再问open.mp怎么开发服务器诸如此类的低端且空泛的问题，因为这会让你显得是个小白，而我不希望解答一些你可能原本就清楚的问题，以免浪费彼此的时间和精力
 * 如果你是个小白，你希望能创建一个游戏模式，自己创造玩法并和朋友/陌生人一起玩耍，那你可以随意提问，我们也会耐心提供帮助
 * 虽然我很不想用“相当于samp的版本更新”去形容open.mp，因为open.mp完全从零开发的，而不是基于泄露的samp源代码更新，部分人可能会因为两者名称的不同而觉得陌生。
@@ -174,11 +175,12 @@ open.mp完全向后兼容，现有的SAMP客户端能够连接服务器，同时
 * Y_Less
 * Zeex
 
-## 教程
+# 教程
 本教程将使用SC-RP(South Central Roleplay by Emmet)作为例子，一步步告诉大家如何把自己手里的sa-mp服务器转为open.mp服务器
 ![—](000.jpeg)
 
 ### 编写脚本的编辑器推荐
+
 顺带提一下，这边推荐使用[VS Code](https://code.visualstudio.com/)(Visual Studio Code)作为你编写脚本的编辑器，以便于接下来的操作能进行快速查找、跳转、编辑等等
 
 VS Code的使用教程点击[此处](https://tieba.baidu.com/p/8035593934)查看
@@ -264,10 +266,16 @@ SC-RP(South Central Roleplay by Emmet)是几年前的源码，本人没有对SC-
 但是为了做教程，下面依旧会讲解关于如何处理重新编译后的警告和代码规范矫正，以及其它问题的讲解，如果你是个有经验的开发人员，可以自行前往 [标签矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#more-tags)，[const矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#const-correctness)，[open.mp功能列表](https://www.open.mp/docs/server/omp-functions)，以及服务端`qawon/include`里的inc文件了解详情，自行修改优化自己的代码
 
 ### 回调与函数名称的变化
+
+##### 一些回调的变化
+
 你需要前往`qawno/include`文件夹查看open.mp提供的inc里的原型名称
+
+> TIPS: 如果你使用的是VS Code作为你的代码编辑器，你应该能很快地能跳转并查到到标题原型 `快捷键: Ctrl + 鼠标左键` 点击报错的回调/函数名称
+
 ```pawn
 // 错误：error 025: function heading differs from prototype
-// 意思是函数标题与原型不同，应该改为和原型一致
+// 意思是函数标题与原型不同，应该改为和原型一致，下面举几个例子
 
 // 错误
 public OnPlayerStateChange(playerid, newstate, oldstate)
@@ -284,20 +292,59 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 // 改为
 public OnPlayerKeyStateChange(playerid, KEY:newkeys, KEY:oldkeys)
 
-// 错误
+//此外还有
 public OnPlayerDeath(playerid, killerid, reason)
-// 改为
 public OnPlayerDeath(playerid, killerid, WEAPON:reason)
+
+public OnPlayerDeath(playerid, killerid, reason)
+public OnPlayerDeath(playerid, killerid, WEAPON:reason)
+
+public OnPlayerWeaponShot(playerid, weaponid, hittype, hitid, Float:fX, Float:fY, Float:fZ)
+public OnPlayerWeaponShot(playerid, WEAPON:weaponid, BULLET_HIT_TYPE:hittype, hitid, Float:fX, Float:fY, Float:fZ)
+
+public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid)
+public OnPlayerTakeDamage(playerid, issuerid, Float:amount, WEAPON:weaponid, bodypart)
+
+// 更多...
 ```
+
+##### 一些 native 的变化
+
+open.mp 对于部分API有新的设计和命名改进，许多库和插件已经采用的命名方案的改进版，比如缩写变成全称，命名规范改善等等
+
+> TIPS: 大部分编辑器可以使用 ctrl + h 进行一键替换
 
 ```pawn
 // 警告：warning 234: function is deprecated (symbol "xxxxxxxxx") Use `xxxxxxxxx`
-// 表示函数名字已弃用，虽然你可以继续使用此函数名称，但是建议进行更换
+// 表示函数名字已弃用，虽然你可以继续使用此函数名称，不影响编译结果，但是建议进行更换
 
 // 如
-PlayerTextDrawColor(playerid, textid, -1);
+PlayerTextDrawColor
 // 改为
-PlayerTextDrawColour(playerid, textid, -1);
+PlayerTextDrawColour
+
+// 如
+GetServerVarAsInt
+// 改为
+GetConsoleVarAsInt
+
+// 此外还有
+GetPlayerDialog
+--> GetPlayerDialogID
+
+GetVehicleTower
+--> GetVehicleCab
+
+GetRandomCarColPair
+--> GetRandomVehicleColourPair
+
+GetPlayer3DTextLabelDrawDist
+--> GetPlayer3DTextLabelDrawDistance
+
+// 如带format功能的 GameTextForAllf
+GameTextForAllf
+// 现统一使用 GameTextForAll ，因为open.mp的此类函数自带 format 功能
+GameTextForAll
 ```
 
 ### 警告与错误
@@ -306,15 +353,15 @@ PlayerTextDrawColour(playerid, textid, -1);
 
 也许刚开始编译你会收到大量(上千条)警告，但是不必惊慌，有许多的内容只需要简单的修改一次，便可以让大量警告消失
 
-#### 1. user warning: Using <a_samp> legacy wrapper.  Include <open.mp> directly.
+##### 1. user warning: Using <a_samp> legacy wrapper.  Include <open.mp> directly.
 
-a_samp头文件已弃用，请改为open.mp作为头文件
+`a_samp`头文件已弃用，请改为`open.mp`作为头文件
 
-```
+```pawn
 #include <open.mp>
 ```
 
-#### 2. warning 213: tag mismatch: 
+##### 2. warning 213: tag mismatch: 
 如下面这行代码会引起警告：
 ```pawn
 PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], 1);
@@ -410,7 +457,7 @@ new bool:engine, bool:lights, bool:alarm, bool:doors, bool:bonnet, bool:boot, bo
 GetVehicleParamsEx(CarData[carid][carVehicle], engine, lights, alarm, doors, bonnet, boot, objective);
 SetVehicleParamsEx(CarData[carid][carVehicle], engine, lights, alarm, true, bonnet, boot, objective);
 ```
-#### 3. warning 213: tag mismatch: 依旧是标签问题，但是是自定义函数或变量
+##### 3. warning 213: tag mismatch: 依旧是标签问题，但是是自定义函数或变量
 比如:
 ```pawn
 enum playerData {
@@ -459,8 +506,13 @@ if (PlayerData[userid][pGuns][g_aWeaponSlots[weaponid]] != WEAPON:0) // 但显�
 	return SendErrorMessage(playerid, "That player has a weapon in the same slot already.");
 ```
 
-#### 4. warning 239: literal array/string passed to a non-const parameter
-意为：字面数组/字符串传递给非const参数
+##### 4. 常量矫正
+
+warning 239: literal array/string passed to a non-const parameter
+
+warning 214: possibly a "const" array argument was intended: "xxxx"
+
+意为：字面数组/字符串传递给非const参数, 可能要使用 `const` 数组参数
 
 const表示变量不能修改，告诉编译器和开发人员，保证它在任何（有效）情况下都不能修改它，这就是所谓的常量正确性--在数据不会被修改时使用const，而在参数会被修改时不使用const。这主要只对字符串和数组有用，这样的一个const语义有时候会帮你避免一些开发时候出现的问题，帮你编写更安全可靠的代码
 
@@ -483,7 +535,7 @@ stock ShowPlayerFooter(playerid, const string[])
 #### 4.1 error 035: argument type mismatch (argument 2)
 如上
 
-#### 5. error 021: symbol already defined:
+##### 5. error 021: symbol already defined:
 前面提到过，open.mp提供了许多新的函数功能，因此你的SA:MP脚本中可能会有一些自定义的函数和open.mp提供的函数重名了，在确保你的自定义函数的功能和open.mp提供的功能一致的情况下，删除你自己的自定义函数，改为使用open.mp的函数。否则请把你的函数名以及使用到该函数的地方修改成其它的名称
 ```pawn
 // 比如 SC-RP 里有一个 GetVehicleDriver 的函数，并且其功能效果和open.mp完全一致，删除它即可，open.mp自带这功能
@@ -509,7 +561,7 @@ stock IsPlayerSpawned(playerid)
 stock IsPlayerSpawnedEx(playerid)
 ```
 
-#### 6. omp-server.exe 控制台警告提示
+##### 6. omp-server.exe 控制台警告提示
 ```
 [Warning] Legacy key `hostname` supplied, using `name`
 [Warning] Legacy key `weburl` supplied, using `website`
@@ -532,10 +584,10 @@ SendRconCommand("name %s", SERVER_NAME);
 SendRconCommand("website %s", SERVER_URL);
 ```
 
-#### 7. 不要着急
+##### 7. 不要着急
 当你的脚本最终把错误修复完成之后，只剩下一些不影响编译结果和功能效果的警告时，你可以在日后的日子里慢慢地调整，同时在创建新的功能玩法时，时刻注意代码规范，养成良好的习惯，有利于代码的可读性、代码的安全性、多人协作、社区开源等等多方面
 
-#### 8. 结尾
+# 结尾
 推荐大家加入我们[QQ群](https://qm.qq.com/q/hgf1H1bReg)和[QQ频道](https://pd.qq.com/s/3upf7y7oo)以获得最新资讯和支持，打造互相探讨学习交流的净地
 
 此篇文档的版本号为1.0，是首版本，因此可能会有纰漏的部分，后续发现问题将会更新，如果你发现以上教程无法解决你的某些问题，请及时和本人联系。
