@@ -361,7 +361,7 @@ GameTextForAll
 #include <open.mp>
 ```
 
-##### 2. warning 213: tag mismatch: 
+##### 2. warning 213: tag mismatch: expected tag "xxxx", but found none ("_")
 如下面这行代码会引起警告：
 ```pawn
 PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], 1);
@@ -370,9 +370,7 @@ PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], 1);
 ```pawn
 native bool:PlayerTextDrawFont(playerid, PlayerText:textid, TEXT_DRAW_FONT:font);
 ```
-这里的font前面加了一个`TEXT_DRAW_FONT`标签，open.mp提供了关于以下font的定义分别代表(0-5)，为什么要设置这类型的标签，因为SAMP关于Textdraw的可用字体只有0-5，也就是有范围的
-
-比如：在SA:MP中如果你使用了字体6，编译器不会有任何警告，然后你进入游戏发现Textdraw显示不出来，你又不知道问题出在哪里，在这种情况下，编译器会给提前告知你问题所在，并让你使用他们所提供的定义去设置Textdraw的字体类型，你可能会觉得多余，因为你本身能够确保自己不会使用0-5以外的字体，但是你要知道，除了字体以外，还有很多很多的关于范围的限制，比如武器ID，Textdraw对齐方式，动作同步，玩家状态等等，又或者是`true`/`false`的判定，只有`真 1`和`假 0`，不会出现`又真又假 2`，`真真假假 3`的条件，当脚本代码庞大，你/其它开发人员不小心填写了超出SAMP支持范围内的数据，SA:MP编译器不给你任何警告，游戏内又无法正常运行你的脚本，在你不牢背这些范围的情况下，你如何能快速发现并解决问题，更重要的是，这是一种很好的习惯和规范。
+这里的font前面加了一个`TEXT_DRAW_FONT`标签，open.mp提供了关于以下6种font的定义，分别代表(0-5)，为什么要设置这类型的标签，因为SAMP关于Textdraw的可用字体只有0-5，也就是有范围的
 
 ```pawn
 TEXT_DRAW_FONT_0
@@ -382,6 +380,13 @@ TEXT_DRAW_FONT_3
 TEXT_DRAW_FONT_SPRITE_DRAW
 TEXT_DRAW_FONT_MODEL_PREVIEW
 ```
+
+比如：在SA:MP中如果你使用了字体6，编译器不会有任何警告，然后你进入游戏发现Textdraw显示不出来，你又不知道问题出在哪里，在这种情况下，编译器会给提前告知你问题所在，并让你使用他们所提供的定义去设置Textdraw的字体类型，你可能会觉得多余，因为你本身能够确保自己不会使用0-5以外的字体
+
+你要知道，除了字体以外，还有很多很多的关于范围的限制，比如`武器ID`，`Textdraw对齐方式`，`动作同步`，`玩家状态`等等，又或者是`true`/`false`的判定，只有`真 1`和`假 0`，不会出现`又真又假 2`，`真真假假 3`的条件
+
+亦或者经验不足的开发人员也许并不像你这样能确保代码没问题。当脚本代码庞大，你/其它开发人员不小心填写了超出SAMP支持范围内的数据，SA:MP编译器不给你任何警告，游戏内又无法正常运行你的脚本，在你不牢背这些范围的情况下，你如何能快速发现并解决问题，更重要的是，这是一种很好的习惯和规范。
+
 解决方式：
 ```pawn
 // 警告 warning 213: tag mismatch: expected tag "t_TEXT_DRAW_FONT", but found none ("_")
@@ -392,8 +397,6 @@ PlayerTextDrawFont(playerid, PlayerData[playerid][pTextdraws][21], TEXT_DRAW_FON
 
 诸如此类的警告还有（不一一列举）：
 
-警告 warning 213: tag mismatch: expected tag "xxxx", but found none ("_")
- 
 ```pawn
 // 警告 warning 213: tag mismatch: expected tag "t_SPECIAL_ACTION", but found none ("_")
 SetPlayerSpecialAction(playerid, 68);
