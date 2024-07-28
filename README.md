@@ -606,7 +606,19 @@ SendRconCommand("name %s", SERVER_NAME);
 SendRconCommand("website %s", SERVER_URL);
 ```
 
-##### 7. 不要着急
+#### 7. warning 240: assigned value is never used (symbol "xxxx")
+
+意为某变量从未使用的警告
+
+但是你确实在使用此变量，编译器却给你发出警告，这时候你应该把变量改为静态变量
+
+```pawn
+// 修改为静态变量
+new var;
+--> static var;
+```
+
+##### 8. 不要着急
 当你的脚本最终把错误修复完成之后，只剩下一些不影响编译结果和功能效果的警告时，你可以在日后的日子里慢慢地调整，同时在创建新的功能玩法时，时刻注意代码规范，养成良好的习惯，有利于代码的可读性、代码的安全性、多人协作、社区开源等等多方面
 
 # 结尾
