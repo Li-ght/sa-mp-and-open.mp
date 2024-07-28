@@ -213,6 +213,12 @@ VS Code的使用教程点击[此处](https://tieba.baidu.com/p/8035593934)查看
 - [更新它们] 其它常用库/插件的更新，现在常用且流行的库/插件很多都已更新，认同并遵循社区对于开发所树立的代码规范，请不要再埋怨，跟上脚步
   - 这些库主要更新的内容除了更新、修复、优化它们本身的内容以外，还做了[标签矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#more-tags)，[const矫正](https://github.com/openmultiplayer/omp-stdlib/blob/master/documentation/readme-expert.md#const-correctness)，函数变化等等，比如大家很熟悉的[streamer插件](https://github.com/samp-incognito/samp-streamer-plugin)
   - 以防有人找不到下载地址，大家可以直接在Github上搜索，或者前往[open.mp Awesome](https://www.open.mp/docs/awesome)，open.mp官网给大家提供了一系列值得推荐的库/插件/工具等等的列表，本人不建议大家继续使用一些过时且偏门的插件和库，请自行做取舍
+- [舍弃它们] 请舍弃那些已过时、不安全、易破解的玩家密码加密插件
+  - 很多服务器对玩家的密码未经过加密处理，任何人都有可能直接看到玩家密码，这是非常不道德的
+  - 以及服务器所使用的加密方式已过时、不安全、易破解，这都是对你服务器里的玩家不负责的行为
+  - 如果你正在使用那些加密方案,如: `whirlpool`，`SHA256_PassHash` 等等，甚至完全没有任何加密处理，请及时替换成更安全的[samp-bcrypt](https://github.com/Sreyas-Sreelal/samp-bcrypt/)
+  - 玩家在注册时请不要在那些服务器使用自己常用密码或涉及隐私的信息，因为它们随时可能会被泄露
+
   
 ### 为什么分open.mp版插件和SA:MP插件
 你只需要知道open.mp版的插件直接放进`components`文件夹即可，其它插件放进`plugins`文件夹，就像SA:MP服务器一样，而放进`components`文件夹的open.mp插件会在服务器启动的时候自动加载，无需写进服务器配置里
