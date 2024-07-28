@@ -606,12 +606,17 @@ SendRconCommand("name %s", SERVER_NAME);
 SendRconCommand("website %s", SERVER_URL);
 ```
 
-#### 7. warning 240: assigned value is never used (symbol "xxxx")
+##### 7. warning 240: assigned value is never used (symbol "xxxx")
 
 意为某变量从未使用的警告
 
-但是你确实在使用此变量，编译器却给你发出警告，这时候你应该把变量改为静态变量
+但是你确实在使用此变量，编译器却给你发出警告，这时候尝试把变量改为静态变量
 
+或者暂时禁用诊断，`#pragma warning push/disable 240/pop`
+
+```pawn
+#pragma warning disable 240
+```
 ```pawn
 // 修改为静态变量
 new var;
