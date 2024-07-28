@@ -416,6 +416,19 @@ ApplyAnimation(playerid, "KISSING", "Grlfrd_Kiss_01", 4.1, 0, 0, 0, 0, 0, 1);
 ApplyAnimation(playerid, "KISSING", "Grlfrd_Kiss_01", 4.1, false, false, false, false, 0, SYNC_ALL);
 ```
 
+![—](003.png)
+
+关于武器的定义本人还是挺喜欢的，因为我记不住25，22，5，9 到底是什么武器的ID，改用定义之后，可以很清楚知道我给予了玩家什么武器，即便过了很久返回去查阅代码，也能一目了然
+
+> TIPS: 如果大家使用VS Code，只需要输入WEAPON_ 其自动补充功能会列举出武器列表，如上图所示。
+
+```pawn
+// 警告 warning 213: tag mismatch: expected tag "t_WEAPON", but found none ("_")
+GivePlayerWeapon(playerid, 25, 20000);
+// 改为
+GivePlayerWeapon(playerid, WEAPON_SHOTGUN, 20000);
+```
+
 ```pawn
 // 警告 warning 213: tag mismatch: expected tag "t_WEAPON_SLOT", but found none ("_")
 // 警告 warning 213: tag mismatch: expected tag "t_WEAPON", but found none ("_")
