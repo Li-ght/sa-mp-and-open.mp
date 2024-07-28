@@ -390,6 +390,9 @@ TEXT_DRAW_FONT_MODEL_PREVIEW
 
 标签规范也包括让传递数值的类型保持一致，比如大家熟悉的SA:MP里的标签 `Text`,`PlayerText`,`bool`,`Text3D:`, open.mp新增了 `WEAPON`,`PLAYER_MARKERS_MODE`,`PLAYER_STATE`,`SPECIAL_ACTION`,`FIGHT_STYLE`,`KEY`等等，不一一列举
 
+数据类型错误也包含以下提示，解决方式和以下类似
+> error 035: argument type mismatch (argument 4)
+
 解决方式：
 ```pawn
 // 警告 warning 213: tag mismatch: expected tag "t_TEXT_DRAW_FONT", but found none ("_")
