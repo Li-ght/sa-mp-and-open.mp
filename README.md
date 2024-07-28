@@ -176,7 +176,7 @@ open.mp (Open Multiplayer, OMP) 圣安地列斯的多人游戏模组，是为了
 * Zeex
 
 # 教程
-本教程将使用SC-RP(South Central Roleplay by Emmet)作为例子，一步步告诉大家如何把自己手里的sa-mp服务器转为open.mp服务器
+本教程将使用[SC-RP(South Central Roleplay by Emmet)](https://github.com/seanny/SC-RP)作为例子，一步步告诉大家如何把自己手里的sa-mp服务器转为open.mp服务器
 ![—](000.jpeg)
 
 ### 编写脚本的编辑器推荐
