@@ -427,7 +427,7 @@ for (new i = 0; i < 13; i ++)
 
 // 改为
 new WEAPON:weaponid, ammo;
-for (new WEAPON_SLOT:i = WEAPON_SLOT:0; i < WEAPON_SLOT:13; i ++)
+for (new WEAPON_SLOT:i; i <= WEAPON_SLOT_DETONATOR; i ++) // WEAPON_SLOT_DETONATOR 代表 12 因此是 <=
 {
     GetPlayerWeaponData(playerid, i, weaponid, ammo);
 }
