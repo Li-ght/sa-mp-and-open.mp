@@ -204,6 +204,7 @@ VS Code的使用教程点击[此处](https://tieba.baidu.com/p/8035593934)查看
   - [Pawn.Regex](https://github.com/katursis/Pawn.Regex/releases) 在 Pawn 中添加对正则表达式的支持
   - [progress2](https://github.com/Southclaws/progress2/tree/master) 非常方便快捷地创建进度条UI
   - [weapon-config](https://github.com/oscar-broman/samp-weapon-config) 功能强大丰富的武器配置，百分百反锁血，伤害响应迅速
+  - [eSelection](https://github.com/TommyB123/eSelection/tree/master) 创建动态模型选择菜单
   - 更多...
 - [删除它们] 如果你服务器正在使用以下这些插件/库，现在你可以删除他们了，因为open.mp具备这些功能
   - [YSF](https://github.com/IS4Code/YSF/releases) 它的许多功能现在已经在 open.mp 中实现，详情见[此处](https://github.com/openmultiplayer/open.mp/issues/189)
