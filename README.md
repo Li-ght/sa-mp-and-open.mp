@@ -387,6 +387,8 @@ TEXT_DRAW_FONT_MODEL_PREVIEW
 
 亦或者经验不足的开发人员也许并不像你这样能确保代码没问题。当脚本代码庞大，你/其它开发人员不小心填写了超出SAMP支持范围内的数据，SA:MP编译器不给你任何警告，游戏内又无法正常运行你的脚本，在你不牢背这些范围的情况下，你如何能快速发现并解决问题，更重要的是，这是一种很好的习惯和规范。
 
+标签规范也包括让传递数值的类型保持一致，比如大家熟悉的SA:MP里的标签 `Text`,`PlayerText`,`bool`,`Text3D:`, open.mp新增了 `WEAPON`,`PLAYER_MARKERS_MODE`,`PLAYER_STATE`,`SPECIAL_ACTION`,`FIGHT_STYLE`,`KEY`等等，不一一列举
+
 解决方式：
 ```pawn
 // 警告 warning 213: tag mismatch: expected tag "t_TEXT_DRAW_FONT", but found none ("_")
