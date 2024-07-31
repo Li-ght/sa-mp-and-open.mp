@@ -1,5 +1,5 @@
 # 快速导航
-### 点击[此处](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B%E4%B8%8E%E5%B8%AE%E5%8A%A9)直接跳转[sa-mp服务器转open.mp服务器 教程与帮助](https://github.com/Li-ght/sa-mp-and-open.mp/blob/main/README.md#%E6%95%99%E7%A8%8B%E4%B8%8E%E5%B8%AE%E5%8A%A9)主题
+### 点击[此处](#教程与帮助)直接跳转[sa-mp服务器转open.mp服务器 教程与帮助](#教程与帮助)主题
 
 # 索引
 [open.mp官网](https://www.open.mp/)
